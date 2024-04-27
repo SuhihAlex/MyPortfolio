@@ -38,6 +38,32 @@ window.addEventListener("scroll", function() {
 });
 
 window.addEventListener("scroll", function() {
+    const aboutPageSkills = document.querySelector('.about__page-block--skills');
+    const aboutPageSkillsPosition = aboutPageSkills.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (aboutPageSkillsPosition < windowHeight / 1.5 + scrollPosition) {
+        aboutPageSkills.classList.add('show');
+    } else {
+        aboutPageSkills.classList.remove('show');
+    }
+});
+
+window.addEventListener("scroll", function() {
+    const aboutPageSocials = document.querySelector('.about__page-block--socials');
+    const aboutPageSocialsPosition = aboutPageSocials.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (aboutPageSocialsPosition < windowHeight / 1.5 + scrollPosition) {
+        aboutPageSocials.classList.add('show');
+    } else {
+        aboutPageSocials.classList.remove('show');
+    }
+});
+
+window.addEventListener("scroll", function() {
     const portfolioBlock = document.querySelector('.projects__card-portfolio');
     const trinityBlock = document.querySelector('.projects__card-trinity');
     const rivoBlock = document.querySelector('.projects__card-rivo');
@@ -123,3 +149,12 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
     });
   });
 });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var titleBlock = document.querySelector(".about__page-block--title");
+        var titlePageBlock = document.querySelector(".about__page-title");
+        titleBlock.classList.add("active");
+        titlePageBlock.classList.add("active");
+    });
+
