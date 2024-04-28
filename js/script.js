@@ -158,3 +158,38 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         titlePageBlock.classList.add("active");
     });
 
+     document.addEventListener("DOMContentLoaded", function() {
+        var titleBlock = document.querySelector(".projects__page-block--title");
+        var titlePageBlock = document.querySelector(".projects__page-title");
+        titleBlock.classList.add("active");
+        titlePageBlock.classList.add("active");
+    });
+
+ document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.projects__card-animation');
+
+    function animateOnScroll() {
+        cards.forEach(function(card) {
+            if (isElementInViewport(card) && !card.classList.contains('animate')) {
+                card.classList.add('animate');
+            }
+        });
+    }
+
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    animateOnScroll();
+
+    window.addEventListener('scroll', animateOnScroll);
+});
+
+
+

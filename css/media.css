@@ -13,6 +13,10 @@
     .about__page-block--skills {
         min-width: 765px;
     }
+
+    .error__subtitle {
+        font-size: 58px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -30,6 +34,10 @@
 
     .about__page-block--skills {
         min-width: 510px;
+    }
+
+    .error__subtitle {
+        font-size: 46px;
     }
 }
 
@@ -106,6 +114,10 @@
 
     .about__page-block--socials {
         min-width: 193px;
+    }
+
+    .error__subtitle {
+        font-size: 37px;
     }
 }
 
@@ -193,6 +205,14 @@
 
     .about__page-block--socials {
         min-height: 110px;
+    }
+
+    .error {
+        padding: 30px 0 65px 0;
+    }
+
+    .error__subtitle {
+        font-size: 24px;
     }
 }
 
