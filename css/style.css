@@ -42,6 +42,7 @@
 
 .active {
     color: var(--neon-green);
+    cursor: auto;
 }
 
 .header__link.active::before {
