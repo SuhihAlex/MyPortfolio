@@ -196,3 +196,13 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
+
+
+sessionStorage.setItem('prevPage', document.referrer);
+
+function goBack() {
+            // Получаем предыдущий URL из sessionStorage
+            var prevPage = sessionStorage.getItem('prevPage');
+            // Переходим на предыдущую страницу
+            window.location.href = prevPage;
+        }

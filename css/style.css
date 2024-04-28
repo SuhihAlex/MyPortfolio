@@ -1113,3 +1113,114 @@
 body.loaded .preloader {
     display: none;
 }
+
+/*========== PROJECTS__PREVIEW =========*/
+
+.projects__preview {
+    margin-bottom: 30px;
+}
+
+.projects__preview-block--back {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.projects__preview-back {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 88%;
+    color: var(--white);
+    border-radius: 10px;
+    background: var(--black-blue);
+    outline: none;
+}
+
+.projects__preview-content {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.projects__preview-portfolio {
+    min-width: 830px;
+    height: 470px;
+    background-image: url(../img/03-Sky\ 2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.projects__preview-portfolio img {
+    min-width: 755px;
+    max-height: 385px;
+}
+
+.projects__preview-block--descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 35px;
+    max-width: 525px;
+}
+
+.projects__card-text {}
+
+.projects__card-title {}
+
+.projects__technology {}
+
+.projects__descr {}
+
+.projects__block-icon {}
+
+.projects__card-text--preview {
+    padding: 0;
+}
+
+.projects__preview-block--btn {
+    display: flex;
+    gap: 10px;
+}
+
+.projects__preview-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 17px 56px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 88%;
+    color: var(--black-blue);
+    border-radius: 10px;
+    background: var(--neon-green);
+}
+
+.projects__preview-block--features {
+    padding: 39px 46px 55px 46px;
+    border-radius: 10px;
+    background: var(--black-blue);
+}
+
+.projects__preview-title {
+    margin: 0;
+    margin-bottom: 11px;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 88%;
+    color: var(--neon-green);
+}
+
+.projects__preview-item {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--white);
+}
+
+.projects__preview-descr {
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--grey);
+}
