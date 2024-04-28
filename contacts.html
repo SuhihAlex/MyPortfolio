@@ -19,7 +19,7 @@
                     <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
                     <li class="header__item"><a href="about.html" class="header__link">About</a></li>
                     <li class="header__item"><a href="projects.html" class="header__link">Projects</a></li>
-                    <li class="header__item"><a href="contacts.html" class="header__link">Contact</a></li>
+                    <li class="header__item"><a href="#" class="header__link active">Contact</a></li>
                 </ul>
             </nav>
     
@@ -35,22 +35,43 @@
                     <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
                     <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
                     <li class="menu__item"><a href="projects.html" class="menu__link">Projects</a></li>
-                    <li class="menu__item"><a href="contacts.html" class="menu__link">Contact</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="error block">
-            <div class="container error__block">
-                <div class="error__background-block">
-                    <h2 class="error__background-title left-error">ERROR ERROR</h2>
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <div class="about__page-block--title">
+                    <h1 class="about__page-title">Contact</h1>
                 </div>
-                <div class="error__block-title">
-                    <h1 class="error__title">ERROR 404</h1>
-                    <p class="error__subtitle">
-                        The page is not yet available
-                    </p>
+                <div class="contacts__block block">
+                    <div class="contacts__block-content">
+                        <h2 class="contacts__title">
+                            Get in Touch
+                        </h2>
+                        <p class="contacts__subtitle">
+                            If&nbsp;you are interested in&nbsp;my&nbsp;work or&nbsp;want to&nbsp;provide feedback about this
+                            website, I&nbsp;am open
+                            to&nbsp;exchanging ideas .
+                        </p>
+                    </div>
+                    <form action="#" method="post" class="contacts__form">
+                        <div class="form__group">
+                            <label class="form__label" for="name">Name</label>
+                            <input class="form__input" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="email">Email</label>
+                            <input class="form__input" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="message">Message</label>
+                            <textarea class="form__text" rea name="message" id="message" rows="4" required></textarea>
+                        </div>
+                        <button class="form__btn" type="submit">Send</button>
+                    </form>
                 </div>
             </div>
         </section>
