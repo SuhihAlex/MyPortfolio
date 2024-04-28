@@ -193,3 +193,6 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 
 
 
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
