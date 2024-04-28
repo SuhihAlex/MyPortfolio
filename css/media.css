@@ -314,6 +314,10 @@
         gap: 13px;
     }
 
+    .error__background-block {
+        display: none;
+    }
+
     .footer__title {
         font-size: 50px;
     }
