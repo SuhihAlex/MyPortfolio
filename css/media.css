@@ -116,6 +116,10 @@
         min-width: 193px;
     }
 
+    .error__title {
+        font-size: 100px;
+    }
+
     .error__subtitle {
         font-size: 37px;
     }
@@ -209,6 +213,10 @@
 
     .error {
         padding: 30px 0 65px 0;
+    }
+
+    .error__title {
+        font-size: 75px;
     }
 
     .error__subtitle {
@@ -307,6 +315,6 @@
     }
 
     .footer__title {
-        font-size: 80px;
+        font-size: 50px;
     }
 }
