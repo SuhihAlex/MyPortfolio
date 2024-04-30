@@ -193,7 +193,7 @@
 
 .left {
     position: relative;
-    animation: moveLeft 5s linear infinite;
+    animation: moveLeft 10s linear infinite;
 }
 
 @keyframes moveLeft {
@@ -208,7 +208,7 @@
 
 .right {
     position: relative;
-    animation: moveRight 5s linear infinite;
+    animation: moveRight 10s linear infinite;
 }
 
 @keyframes moveRight {
@@ -1051,7 +1051,7 @@
 
 .left-error {
     position: relative;
-    animation: moveLeft 5s linear infinite;
+    animation: moveLeft 10s linear infinite;
 }
 
 .error__block-title {
@@ -1164,16 +1164,6 @@ body.loaded .preloader {
     padding: 35px 35px;
     max-width: 525px;
 }
-
-.projects__card-text {}
-
-.projects__card-title {}
-
-.projects__technology {}
-
-.projects__descr {}
-
-.projects__block-icon {}
 
 .projects__card-text--preview {
     padding: 0;
