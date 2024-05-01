@@ -141,9 +141,9 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 245px;
     background-color: var(--neon-green);
-    padding: 20px;
+    padding: 150px 20px 20px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: translateX(-200px);
 }
@@ -271,6 +271,10 @@
 
 .hero__link {
     z-index: 100;
+}
+
+.mail {
+    fill: #d5ff3f;
 }
 
 /*========== ABOUT =========*/
@@ -711,6 +715,10 @@
     background: var(--black-blue);
     cursor: pointer;
     cursor: url(../img/cursor.svg), auto;
+}
+
+.error {
+    color: red;
 }
 
 /*========== FOOTER =========*/
@@ -1213,4 +1221,10 @@ body.loaded .preloader {
     font-weight: 400;
     font-size: 25px;
     color: var(--grey);
+}
+
+/*========== NEWS =========*/
+
+.news__page-block {
+    justify-content: center;
 }

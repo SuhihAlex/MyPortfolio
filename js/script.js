@@ -1,3 +1,4 @@
+'use strict'
 /* Progress Bar */
 
 function progressBar() {
@@ -109,23 +110,27 @@ for (let elm of elements) {
 
 /*====== BURGER ======*/
 function burgerMenu() {
-  const menuToggle = document.querySelector('.burger');
-  const menu = document.querySelector('.menu');
+        const burger = document.querySelector('.burger');
+        const menu = document.querySelector('.menu');
 
-  menu.classList.toggle('active');
+        burger.classList.toggle('open');
+        menu.classList.toggle('active');
 
-  if (menu.classList.contains('active')) {
-    menuToggle.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Запрет прокрутки страницы при открытом меню
-  } else {
-    menuToggle.classList.remove('active');
-    document.body.style.overflow = ''; // Разрешение прокрутки страницы при закрытом меню
-  }
-}
+        if (burger.classList.contains('active')) {
+            document.body.style.overflow = 'hidden'; // Запрет прокрутки страницы при открытом меню
+        } else {
+            document.body.style.overflow = ''; // Разрешение прокрутки страницы при закрытом меню
+        }
+    }
 
-document.querySelector('.burger').addEventListener('click', function() {
-  this.classList.toggle('open');
-});
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 1024) {
+            document.body.style.overflowY = 'hidden';
+        } else {
+            document.body.style.overflowY = '';
+        }
+    });
+
 
 /* SmoothScroll */
 
@@ -152,21 +157,29 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 
 
     document.addEventListener("DOMContentLoaded", function() {
-        var titleBlock = document.querySelector(".about__page-block--title");
-        var titlePageBlock = document.querySelector(".about__page-title");
+    let titleBlock = document.querySelector(".about__page-block--title");
+    let titlePageBlock = document.querySelector(".about__page-title");
+
+    if (titleBlock && titlePageBlock) {
         titleBlock.classList.add("active");
         titlePageBlock.classList.add("active");
-    });
+    }
+});
+
 
      document.addEventListener("DOMContentLoaded", function() {
-        var titleBlock = document.querySelector(".projects__page-block--title");
-        var titlePageBlock = document.querySelector(".projects__page-title");
+    let titleBlock = document.querySelector(".projects__page-block--title");
+    let titlePageBlock = document.querySelector(".projects__page-title");
+
+    if (titleBlock && titlePageBlock) {
         titleBlock.classList.add("active");
         titlePageBlock.classList.add("active");
-    });
+    }
+});
+
 
  document.addEventListener('DOMContentLoaded', function() {
-    var cards = document.querySelectorAll('.projects__card-animation');
+    let cards = document.querySelectorAll('.projects__card-animation');
 
     function animateOnScroll() {
         cards.forEach(function(card) {
@@ -177,7 +190,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
     }
 
     function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
+        const rect = el.getBoundingClientRect();
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
@@ -192,7 +205,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 });
 
 
-
+// PRELOADER
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
@@ -200,9 +213,18 @@ window.addEventListener('load', function() {
 
 sessionStorage.setItem('prevPage', document.referrer);
 
+// BACK
 function goBack() {
             // Получаем предыдущий URL из sessionStorage
-            var prevPage = sessionStorage.getItem('prevPage');
+            let prevPage = sessionStorage.getItem('prevPage');
             // Переходим на предыдущую страницу
             window.location.href = prevPage;
+        }
+
+// Замена языка
+function changeLanguage() {
+            let select = document.getElementById("langSelect");
+            let lang = select.options[select.selectedIndex].value;
+            let url = window.location.href.split('?')[0]; // Получаем URL без параметров
+            window.location.href = url + "?lang=" + lang;
         }

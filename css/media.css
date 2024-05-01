@@ -150,6 +150,19 @@
 }
 
 @media (max-width: 768px) {
+    .header__block {
+            justify-content: flex-end;
+            padding: 40px 20px;
+        }
+
+    .header__nav {
+            display: none;
+        }
+    
+        .burger {
+            display: block;
+        }
+
     .hero__background-title {
         font-size: 105px;
     }
@@ -257,19 +270,6 @@
 }
 
 @media (max-width: 480px) {
-
-    .header__block {
-        justify-content: flex-end;
-        padding: 40px 20px;
-    }
-
-    .header__nav {
-        display: none;
-    }
-
-    .burger {
-        display: block;
-    }
 
     .hero__background-title {
         font-size: 55px;
