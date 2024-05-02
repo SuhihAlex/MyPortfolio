@@ -136,7 +136,3 @@ a {
     opacity: 1;
     transition: opacity 3s;
 }
-
-.no-scroll {
-    overflow: hidden;
-}

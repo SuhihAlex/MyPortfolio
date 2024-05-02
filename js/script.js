@@ -115,28 +115,16 @@ function burgerMenu() {
 
     burger.classList.toggle('open');
     menu.classList.toggle('active');
-    menu.classList.toggle('show-menu');
 
     // Если меню открыто, блокируем прокрутку страницы
     if (menu.classList.contains('active')) {
-        // Прокручиваем окно к верхней позиции
-        window.scrollTo(0, 0);
         // Добавляем класс, который блокирует прокрутку
-        document.body.classList.add('no-scroll');
+        document.body.style.overflow = 'hidden';
     } else {
         // Если меню закрыто, разблокируем прокрутку страницы
-        document.body.classList.remove('no-scroll');
-    }
-
-    // Если меню открыто, блокируем прокрутку страницы
-    if (menuContainer.classList.contains('show-menu')) {
-        document.body.style.overflow = 'hidden'; /* Блокируем прокрутку */
-    } else {
-        // Если меню закрыто, разблокируем прокрутку страницы
-        document.body.style.overflow = ''; /* Разблокируем прокрутку */
+        document.body.style.overflow = '';
     }
 }
-
 
     window.addEventListener('resize', function() {
         if (window.innerWidth <= 1024) {
