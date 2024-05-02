@@ -304,12 +304,12 @@
 @media (max-width: 480px) {
 
     .header {
-            max-width: 480px;
-        }
+        max-width: 480px;
+    }
 
-                .menu {
-                    max-width: 480px;
-                }
+    .menu {
+        max-width: 480px;
+    }
 
     .hero__background-title {
         font-size: 55px;
