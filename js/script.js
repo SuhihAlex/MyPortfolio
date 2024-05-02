@@ -110,28 +110,30 @@ for (let elm of elements) {
 
 /*====== BURGER ======*/
 function burgerMenu() {
-        const burger = document.querySelector('.burger');
-        const menu = document.querySelector('.menu');
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.menu');
 
-        burger.classList.toggle('open');
-        menu.classList.toggle('active');
+    burger.classList.toggle('open');
+    menu.classList.toggle('active');
 
-        // Если меню открыто, блокируем прокрутку страницы
+    // Если меню открыто, добавляем класс, который блокирует прокрутку
     if (menu.classList.contains('active')) {
-        // Запоминаем текущее положение прокрутки страницы
-        const scrollY = window.scrollY;
-        // Добавляем класс, который блокирует прокрутку
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollY}px`;
+        document.body.classList.add('no-scroll');
+        // Добавляем обработчик события для колесика мыши
+        document.addEventListener('wheel', preventDefaultScroll);
     } else {
-        // Если меню закрыто, разблокируем прокрутку страницы
-        const scrollY = parseInt(document.body.style.top || '0', 10);
-        document.body.style.position = '';
-        document.body.style.top = '';
-        // Прокручиваем страницу к исходному положению
-        window.scrollTo(0, scrollY * -1);
+        // Если меню закрыто, удаляем класс, который блокирует прокрутку
+        document.body.classList.remove('no-scroll');
+        // Удаляем обработчик события для колесика мыши
+        document.removeEventListener('wheel', preventDefaultScroll);
     }
-    }
+}
+
+// Функция для предотвращения прокрутки при открытом меню
+function preventDefaultScroll(event) {
+    event.preventDefault();
+}
+
 
     window.addEventListener('resize', function() {
         if (window.innerWidth <= 1024) {

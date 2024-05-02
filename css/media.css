@@ -89,6 +89,10 @@
             display: block;
         }
 
+        .menu {
+            max-width: 1024px;
+        }
+
     .hero__background-block {
         padding-bottom: 180px;
     }
@@ -186,6 +190,10 @@
     .header {
             max-width: 768px;
         }
+
+                .menu {
+                    max-width: 768px;
+                }
 
     .hero__background-title {
         font-size: 105px;
@@ -298,6 +306,10 @@
     .header {
             max-width: 480px;
         }
+
+                .menu {
+                    max-width: 480px;
+                }
 
     .hero__background-title {
         font-size: 55px;
