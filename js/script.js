@@ -138,13 +138,16 @@ function burgerMenu() {
     }
 }
 
-    window.addEventListener('resize', function() {
-        if (window.innerWidth <= 1024) {
-            document.body.style.overflowY = 'hidden';
-        } else {
-            document.body.style.overflowY = '';
-        }
-    });
+window.addEventListener('resize', function() {
+    const menu = document.querySelector('.menu');
+    // Проверяем, открыто ли меню, и блокируем скролл только при необходимости
+    if (menu.classList.contains('active') && window.innerWidth <= 1024) {
+        document.body.style.overflowY = 'hidden';
+    } else {
+        document.body.style.overflowY = '';
+    }
+});
+
 
 
 /* SmoothScroll */
