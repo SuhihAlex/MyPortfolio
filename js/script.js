@@ -115,6 +115,7 @@ function burgerMenu() {
 
     burger.classList.toggle('open');
     menu.classList.toggle('active');
+    menu.classList.toggle('show-menu');
 
     // Если меню открыто, блокируем прокрутку страницы
     if (menu.classList.contains('active')) {
@@ -125,6 +126,14 @@ function burgerMenu() {
     } else {
         // Если меню закрыто, разблокируем прокрутку страницы
         document.body.classList.remove('no-scroll');
+    }
+
+    // Если меню открыто, блокируем прокрутку страницы
+    if (menuContainer.classList.contains('show-menu')) {
+        document.body.style.overflow = 'hidden'; /* Блокируем прокрутку */
+    } else {
+        // Если меню закрыто, разблокируем прокрутку страницы
+        document.body.style.overflow = ''; /* Разблокируем прокрутку */
     }
 }
 
