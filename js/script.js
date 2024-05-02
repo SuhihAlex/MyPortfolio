@@ -126,13 +126,13 @@ function burgerMenu() {
     }
 }
 
-    window.addEventListener('resize', function() {
-        if (window.innerWidth <= 1024) {
-            document.body.style.overflowY = 'hidden';
-        } else {
-            document.body.style.overflowY = '';
-        }
-    });
+    // window.addEventListener('resize', function() {
+    //     if (window.innerWidth <= 1024) {
+    //         document.body.style.overflowY = 'hidden';
+    //     } else {
+    //         document.body.style.overflowY = '';
+    //     }
+    // });
 
 
 /* SmoothScroll */
