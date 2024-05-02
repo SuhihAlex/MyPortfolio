@@ -38,31 +38,43 @@ window.addEventListener("scroll", function() {
     }
 });
 
-window.addEventListener("scroll", function() {
-    const aboutPageSkills = document.querySelector('.about__page-block--skills');
-    const aboutPageSkillsPosition = aboutPageSkills.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener("scroll", function() {
+        const aboutPageSkills = document.querySelector('.about__page-block--skills');
+        if (!aboutPageSkills) return; // Проверяем, существует ли элемент
+        const aboutPageSkillsPosition = aboutPageSkills.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (aboutPageSkillsPosition < windowHeight / 1.5 + scrollPosition) {
-        aboutPageSkills.classList.add('show');
-    } else {
-        aboutPageSkills.classList.remove('show');
-    }
+        if (aboutPageSkillsPosition < windowHeight / 1.5 + scrollPosition) {
+            aboutPageSkills.classList.add('show');
+        } else {
+            aboutPageSkills.classList.remove('show');
+        }
+    });
 });
 
+
 window.addEventListener("scroll", function() {
+    // Получаем элемент .about__page-block--socials
     const aboutPageSocials = document.querySelector('.about__page-block--socials');
-    const aboutPageSocialsPosition = aboutPageSocials.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (aboutPageSocialsPosition < windowHeight / 1.5 + scrollPosition) {
-        aboutPageSocials.classList.add('show');
-    } else {
-        aboutPageSocials.classList.remove('show');
+    // Проверяем, существует ли элемент
+    if (aboutPageSocials) {
+        // Получаем его позицию
+        const aboutPageSocialsPosition = aboutPageSocials.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Проверяем позицию элемента и добавляем/удаляем класс в зависимости от условия
+        if (aboutPageSocialsPosition < windowHeight / 1.5 + scrollPosition) {
+            aboutPageSocials.classList.add('show');
+        } else {
+            aboutPageSocials.classList.remove('show');
+        }
     }
 });
+
 
 window.addEventListener("scroll", function() {
     const portfolioBlock = document.querySelector('.projects__card-portfolio');
@@ -126,13 +138,13 @@ function burgerMenu() {
     }
 }
 
-    // window.addEventListener('resize', function() {
-    //     if (window.innerWidth <= 1024) {
-    //         document.body.style.overflowY = 'hidden';
-    //     } else {
-    //         document.body.style.overflowY = '';
-    //     }
-    // });
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 1024) {
+            document.body.style.overflowY = 'hidden';
+        } else {
+            document.body.style.overflowY = '';
+        }
+    });
 
 
 /* SmoothScroll */
