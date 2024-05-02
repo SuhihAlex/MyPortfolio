@@ -116,22 +116,16 @@ function burgerMenu() {
     burger.classList.toggle('open');
     menu.classList.toggle('active');
 
-    // Если меню открыто, добавляем класс, который блокирует прокрутку
+    // Если меню открыто, блокируем прокрутку страницы
     if (menu.classList.contains('active')) {
+        // Прокручиваем окно к верхней позиции
+        window.scrollTo(0, 0);
+        // Добавляем класс, который блокирует прокрутку
         document.body.classList.add('no-scroll');
-        // Добавляем обработчик события для колесика мыши
-        document.addEventListener('wheel', preventDefaultScroll);
     } else {
-        // Если меню закрыто, удаляем класс, который блокирует прокрутку
+        // Если меню закрыто, разблокируем прокрутку страницы
         document.body.classList.remove('no-scroll');
-        // Удаляем обработчик события для колесика мыши
-        document.removeEventListener('wheel', preventDefaultScroll);
     }
-}
-
-// Функция для предотвращения прокрутки при открытом меню
-function preventDefaultScroll(event) {
-    event.preventDefault();
 }
 
 
