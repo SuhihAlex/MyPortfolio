@@ -61,6 +61,27 @@
 }
 
 @media (max-width: 1024px) {
+
+    .header {
+        max-width: 1024px;
+    }
+
+    .logo {
+        z-index: 1002;
+    }
+
+    .header__block {
+            padding: 40px 20px;
+        }
+    
+        .header__nav {
+            display: none;
+        }
+    
+        .burger {
+            display: block;
+        }
+
     .hero__background-block {
         padding-bottom: 180px;
     }
@@ -80,6 +101,10 @@
 
     .hero__subtitle {
         font-size: 20px;
+    }
+
+    .projects__block-icon {
+        margin-bottom: 30px;
     }
 
     .projects__block-img {
@@ -150,17 +175,9 @@
 }
 
 @media (max-width: 768px) {
-    .header__block {
-            justify-content: flex-end;
-            padding: 40px 20px;
-        }
 
-    .header__nav {
-            display: none;
-        }
-    
-        .burger {
-            display: block;
+    .header {
+            max-width: 768px;
         }
 
     .hero__background-title {
@@ -270,6 +287,10 @@
 }
 
 @media (max-width: 480px) {
+
+    .header {
+            max-width: 480px;
+        }
 
     .hero__background-title {
         font-size: 55px;

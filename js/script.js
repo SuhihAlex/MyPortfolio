@@ -116,11 +116,21 @@ function burgerMenu() {
         burger.classList.toggle('open');
         menu.classList.toggle('active');
 
-        if (burger.classList.contains('active')) {
-            document.body.style.overflow = 'hidden'; // Запрет прокрутки страницы при открытом меню
-        } else {
-            document.body.style.overflow = ''; // Разрешение прокрутки страницы при закрытом меню
-        }
+        // Если меню открыто, блокируем прокрутку страницы
+    if (menu.classList.contains('active')) {
+        // Запоминаем текущее положение прокрутки страницы
+        const scrollY = window.scrollY;
+        // Добавляем класс, который блокирует прокрутку
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+    } else {
+        // Если меню закрыто, разблокируем прокрутку страницы
+        const scrollY = parseInt(document.body.style.top || '0', 10);
+        document.body.style.position = '';
+        document.body.style.top = '';
+        // Прокручиваем страницу к исходному положению
+        window.scrollTo(0, scrollY * -1);
+    }
     }
 
     window.addEventListener('resize', function() {

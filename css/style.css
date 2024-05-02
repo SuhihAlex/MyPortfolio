@@ -20,9 +20,14 @@
 
 .header__block {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 40px 0;
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
 }
 
 .header__list {
@@ -101,6 +106,40 @@
     }
 }
 
+/*========== LANGUAGE =========*/
+
+.header__block-language {
+}
+
+.header__language-select {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    outline: none;
+    cursor: url(../img/cursor.svg), auto;
+}
+
+.header__language-lang {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: capitalize;
+    background-color: #131313;
+    border: none;
+    outline: none;
+    cursor: url(../img/cursor.svg), auto;
+}
+
+.header__language-lang:focus,
+.header__language-lang:hover {
+    background-color: transparent;
+    cursor: url(../img/cursor.svg), auto;
+}
+
 /*========== BURGER =========*/
 
 .burger {
@@ -110,6 +149,7 @@
     justify-content: space-between;
     width: 30px;
     height: 20px;
+    z-index: 1002;
 }
 
 .burger.open .burger__bar:nth-child(1) {
@@ -122,6 +162,10 @@
 
 .burger.open .burger__bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+}
+
+.burger.open .burger__bar{
+    background-color: var(--black-blue);
 }
 
 .burger__bar {
@@ -141,9 +185,9 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 245px;
+    width: 100%;
     background-color: var(--neon-green);
-    padding: 150px 20px 20px 20px;
+    padding: 100px 20px 20px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: translateX(-200px);
 }
@@ -163,6 +207,11 @@
 }
 
 .menu__link {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 88%;
+    color: var(--black-blue);
     color: var(--black-blue);
     transition: color 0.3s;
 }
@@ -1227,4 +1276,39 @@ body.loaded .preloader {
 
 .news__page-block {
     justify-content: center;
+}
+
+.news__block-card {
+    margin-bottom: 30px;
+}
+
+.news__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+.news__item {
+    grid-column: 6 span;
+    background: var(--black-blue);
+}
+
+.news__img {
+    margin-bottom: 30px;
+    max-width: 724px;
+}
+
+.news__content {
+    padding: 15px;
+}
+
+.news__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.news__descr-link {
+    color: var(--neon-green);
 }
