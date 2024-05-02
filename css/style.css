@@ -20,7 +20,7 @@
 
 .header__block {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 40px 0;
 }
@@ -1295,7 +1295,6 @@ body.loaded .preloader {
 
 .news__img {
     margin-bottom: 30px;
-    max-width: 724px;
 }
 
 .news__content {

@@ -57,6 +57,9 @@
         min-width: 364px;
     }
 
+    .news__item {
+        grid-column: 12 span;
+    }
 
 }
 
@@ -64,6 +67,10 @@
 
     .header {
         max-width: 1024px;
+    }
+
+    .header__block {
+        justify-content: flex-end;
     }
 
     .logo {

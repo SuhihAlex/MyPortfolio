@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <title>MyPortfolio</title>
+    <title>ASFrontEnd</title>
 </head>
 <body class="page__body">
     <div class="preloader">
@@ -21,7 +21,7 @@
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
                     <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
-                    <li class="header__item"><a href="about.html" class="header__link">About</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link">About me</a></li>
                     <li class="header__item"><a href="projects.html" class="header__link active">Projects</a></li>
                     <li class="header__item"><a href="news.html" class="header__link">News</a></li>
                     <li class="header__item"><a href="error.html" class="header__link">Blog</a></li>
@@ -39,7 +39,7 @@
             <nav class="menu">
                 <ul class="menu__list list-reset">
                     <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link">About me</a></li>
                     <li class="menu__item"><a href="projects.html" class="menu__link">Projects</a></li>
                     <li class="menu__item"><a href="news.html" class="menu__link">News</a></li>
                     <li class="menu__item"><a href="error.html" class="menu__link">Blog</a></li>
@@ -143,9 +143,16 @@
                         </a>
                     </div>
                     <small>
-                        Portfolio v1.0
+                        Portfolio v2.0
                         © 2024 Alex
                     </small>
+                    <div class="header__block-language">
+                        <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                            <option class="header__language-lang active" value="en">EN</option>
+                            <option class="header__language-lang" value="ru">RU</option>
+                            <option class="header__language-lang" value="ro">RO</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
