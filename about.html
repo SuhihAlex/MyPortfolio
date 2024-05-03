@@ -18,14 +18,18 @@
     <div class="progress-bar" id="progressBar"></div>
     <header class="header">
         <div class="container header__block">
+    
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
-                    <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
-                    <li class="header__item"><a href="#" class="header__link active">About me</a></li>
-                    <li class="header__item"><a href="projects.html" class="header__link">Projects</a></li>
-                    <li class="header__item"><a href="news.html" class="header__link">News</a></li>
-                    <li class="header__item"><a href="error.html" class="header__link">Blog</a></li>
-                    <li class="header__item"><a href="contacts.html" class="header__link">Contact</a></li>
+                    <li class="header__item"><a href="index.html" class="header__link" data-lang-key="home">Home</a></li>
+                    <li class="header__item"><a href="#" class="header__link active" data-lang-key="about">About me</a>
+                    </li>
+                    <li class="header__item"><a href="projects.html" class="header__link"
+                            data-lang-key="projects">Projects</a></li>
+                    <li class="header__item"><a href="news.html" class="header__link" data-lang-key="news">News</a></li>
+                    <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
+                    <li class="header__item"><a href="contacts.html" class="header__link"
+                            data-lang-key="contact">Contact</a></li>
                 </ul>
             </nav>
     
@@ -38,12 +42,14 @@
             </div>
             <nav class="menu">
                 <ul class="menu__list list-reset">
-                    <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link active">About me</a></li>
-                    <li class="menu__item"><a href="projects.html" class="menu__link">Projects</a></li>
-                    <li class="menu__item"><a href="news.html" class="menu__link">News</a></li>
-                    <li class="menu__item"><a href="error.html" class="menu__link">Blog</a></li>
-                    <li class="menu__item"><a href="contacts.html" class="menu__link">Contact</a></li>
+                    <li class="menu__item"><a href="index.html" class="menu__link" data-lang-key="home">Home</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-lang-key="about">About me</a></li>
+                    <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Projects</a>
+                    </li>
+                    <li class="menu__item"><a href="news.html" class="menu__link" data-lang-key="news">News</a></li>
+                    <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
+                    <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -53,33 +59,37 @@
         <section class="about__page">
             <div class="container">
                 <div class="about__page-block--title">
-                    <h1 class="about__page-title">About me</h1>
+                    <h1 class="about__page-title" data-lang-key="about">About me</h1>
                 </div>
                 <div class="about__page-block--content block">
                     <div class="about__page-block--img">
                         <img src="img/2024-04-27_01-18-29-028.jpg" alt="Foto">
                     </div>
                     <div class="about__page-content">
-                        <p class="about__page-content--descr">
-                            I&rsquo;m Alex, FrontEnd Development. My&nbsp;passion lies in&nbsp;creating user-centred experiences
-                            as&nbsp;a&nbsp; <span>UI/UX designer and frontend developer</span>. With a&nbsp;keen attention to&nbsp;detail and a&nbsp;love for
-                            clean code, I&nbsp;specialise in&nbsp;building high-performance websites and applications. <span>My&nbsp;experience spans
-                            HTML, CSS, JavaScript, Node.js, Gulp, Sass, jQuery, and Bootstrap</span>. From concept to&nbsp;implementation, I&nbsp;strive
-                            to&nbsp;create digital experiences that seamlessly blend functionality and aesthetics. <span>My&nbsp;journey is&nbsp;not
-                            limited to&nbsp;just coding</span>. Collaboration is&nbsp;at&nbsp;the heart of&nbsp;my&nbsp;approach, as&nbsp;I believe the
-                            best results are achieved through teamwork and communication. Outside the realm of&nbsp;technology, I&nbsp;find solace
-                            in&nbsp;creative pursuits. Graphic design brings out my&nbsp;creativity in&nbsp;the digital realm. And when&nbsp;I need
-                            to&nbsp;recharge, you&rsquo;ll often find me&nbsp;playing video games. So&nbsp;whether you&rsquo;re looking for
-                            an&nbsp; <span>experienced developer, creative designer or&nbsp;team player</span>, I&rsquo;m ready to&nbsp;bring your digital ideas
-                            to&nbsp;life. Let&rsquo;s embark on&nbsp;an&nbsp;exciting innovation journey together!
+                        <p class="about__page-content--descr" data-lang-key="about_text">
+                            I'm Alex, FrontEnd Development. My passion lies in creating user-centred experiences as a
+                            <span>UI/UX designer and frontend developer</span>. With a keen attention to detail and a love for
+                            clean code, I specialise in building high-performance websites and applications.
+                            <span>My experience spans HTML, CSS, JavaScript, Node.js, Gulp, Sass, jQuery, and Bootstrap</span>.
+                            From concept to implementation, I strive
+                            to create digital experiences that seamlessly blend functionality and aesthetics.
+                            <span>My journey is not limited to just coding</span>. Collaboration is at the heart of my approach,
+                            as I believe the
+                            best results are achieved through teamwork and communication. Outside the realm of technology, I
+                            find solace
+                            in creative pursuits. Graphic design brings out my creativity in the digital realm. And when I need
+                            to recharge, you'll often find me playing video games. So whether you're looking for
+                            an <span>experienced developer, creative designer or team player</span>, I'm ready to bring your
+                            digital ideas
+                            to life. Let's embark on an exciting innovation journey together!
                         </p>
-                        <a href="other/resume.pdf" class="about__page-download">
+                        <a href="other/resume.pdf" class="about__page-download" data-lang-key="download_resume">
                             <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M11.6328 0.65625H2.85547C1.57976 0.65625 0.545654 1.69035 0.545654 2.96606V22.3685C0.545654 23.6442 1.57976 24.6783 2.85547 24.6783H16.7143C17.9901 24.6783 19.0242 23.6442 19.0242 22.3685V8.04765L11.6328 0.65625ZM10.7088 8.97158V2.5041L17.1763 8.97158H10.7088Z"
                                     fill="" />
                             </svg>
-    
+        
                             Download Resume
                         </a>
                     </div>
@@ -87,7 +97,7 @@
                 <div class="about__page-block">
                     <div class="about__page-block--skills">
                         <div class="about__page-title--block">
-                            <h4 class="about__page-title--name">Skills</h4>
+                            <h4 class="about__page-title--name" data-lang-key="skills">Skills</h4>
                         </div>
                         <div class="about__page-skills">
                             <img src="img/file_type_html_icon_130541.svg" alt="HTML">
@@ -121,27 +131,18 @@
         <div class="container">
             <div class="footer__block block">
                 <div class="footer__content">
-                    <h2 class="footer__title">Alex.</h2>
-                    <p class="footer__subtitle">
-                        I&nbsp;am a&nbsp;web developer living in&nbsp;Moldova. I&nbsp;have a&nbsp;very deep passion for
-                        Front End Development <span>❤</span>
-                        This site is&nbsp;made with a&nbsp;lot of&nbsp;love and passion.
+                    <h2 class="footer__title" data-lang-key="footerTitle">Alex.</h2>
+                    <p class="footer__subtitle" data-lang-key="footerSubtitle">
+                        I am a web developer living in Moldova. I have a very deep passion for Front End Development ❤ This
+                        site is made with a lot of love and passion.
                     </p>
-                    <div class="footer__block-socials">
-                        <a href="https://www.instagram.com/" class="footer__link" target="_blank">
-                            <img src="img/instagram.svg" alt="Instagram">
-                        </a>
-                        <a href="https://github.com/SuhihAlex?tab=repositories" class="footer__link" target="_blank">
-                            <img src="img/github.svg" alt="GitHub">
-                        </a>
-                    </div>
                     <small>
-                        Portfolio v2.0
+                        <span data-lang-key="portfolioVersion">Portfolio v2.0</span>
                         © 2024 Alex
                     </small>
                     <div class="header__block-language">
                         <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
-                            <option class="header__language-lang active" value="en">EN</option>
+                            <option class="header__language-lang" value="en">EN</option>
                             <option class="header__language-lang" value="ru">RU</option>
                             <option class="header__language-lang" value="ro">RO</option>
                         </select>
@@ -150,6 +151,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/language.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

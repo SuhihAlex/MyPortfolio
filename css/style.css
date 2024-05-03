@@ -296,7 +296,7 @@
     margin: 0;
     margin-bottom: 17px;
     font-weight: 500;
-    font-size: 46px;
+    font-size: 44px;
     color: var(--neon-green);
 }
 
@@ -1318,4 +1318,21 @@ body.loaded .preloader {
 
 .contacts__title-ru {
     font-size: 105px;
+}
+
+.russian.hero__background-block {
+    padding-bottom: 140px;
+}
+
+.russian.hero__title {
+    height: 175px;
+    font-size: 210px;
+}
+
+.russian.projects__title {
+    font-size: 50px;
+}
+
+.russian.contacts__title {
+    font-size: 86px;
 }
