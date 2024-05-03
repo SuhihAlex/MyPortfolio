@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 /* Progress Bar */
 
+// Функция для отображения прогресс-бара при прокрутке страницы
+// Function to display the progress bar while scrolling the page
 function progressBar() {
   let scroll = document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -14,98 +16,55 @@ function progressBar() {
 }
 window.addEventListener("scroll", progressBar);
 
-window.addEventListener("scroll", function() {
-    const aboutBlock = document.querySelector('.about__block');
-    const aboutPosition = aboutBlock.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (aboutPosition < windowHeight / 1.5) {
-        aboutBlock.classList.add('show');
-    } else {
-        aboutBlock.classList.remove('show');
-    }
-});
+// Оптимизированный код для отображения элементов при прокрутке страницы
+// Optimized code to display elements while scrolling the page
 
-window.addEventListener("scroll", function() {
-    const projectsBlock = document.querySelector('.projects__block');
-    const projectsPosition = projectsBlock.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+// Функция для отображения блоков при прокрутке страницы
+// Function to display blocks while scrolling the page
+function displayBlocksOnScroll(selector, offsetFactor) {
+    const blocks = document.querySelectorAll(selector);
 
-    if (projectsPosition < windowHeight / 1.5 + scrollPosition) {
-        projectsBlock.classList.add('show');
-    } else {
-        projectsBlock.classList.remove('show');
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    window.addEventListener("scroll", function() {
-        const aboutPageSkills = document.querySelector('.about__page-block--skills');
-        if (!aboutPageSkills) return; // Проверяем, существует ли элемент
-        const aboutPageSkillsPosition = aboutPageSkills.getBoundingClientRect().top;
+    // Обработчик события прокрутки
+    // Scroll event handler
+    function scrollHandler() {
         const windowHeight = window.innerHeight;
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (aboutPageSkillsPosition < windowHeight / 1.5 + scrollPosition) {
-            aboutPageSkills.classList.add('show');
-        } else {
-            aboutPageSkills.classList.remove('show');
-        }
-    });
-});
-
-
-window.addEventListener("scroll", function() {
-    // Получаем элемент .about__page-block--socials
-    const aboutPageSocials = document.querySelector('.about__page-block--socials');
-
-    // Проверяем, существует ли элемент
-    if (aboutPageSocials) {
-        // Получаем его позицию
-        const aboutPageSocialsPosition = aboutPageSocials.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Проверяем позицию элемента и добавляем/удаляем класс в зависимости от условия
-        if (aboutPageSocialsPosition < windowHeight / 1.5 + scrollPosition) {
-            aboutPageSocials.classList.add('show');
-        } else {
-            aboutPageSocials.classList.remove('show');
-        }
-    }
-});
-
-
-window.addEventListener("scroll", function() {
-    const portfolioBlock = document.querySelector('.projects__card-portfolio');
-    const trinityBlock = document.querySelector('.projects__card-trinity');
-    const rivoBlock = document.querySelector('.projects__card-rivo');
-    const portfolioPosition = portfolioBlock.getBoundingClientRect().top;
-    const trinityPosition = trinityBlock.getBoundingClientRect().top;
-    const rivoPosition = rivoBlock.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (portfolioPosition < windowHeight / 1.5) {
-        portfolioBlock.classList.add('show');
-    } else {
-        portfolioBlock.classList.remove('show');
+        blocks.forEach(function(block) {
+            const blockPosition = block.getBoundingClientRect().top;
+            if (blockPosition < windowHeight / offsetFactor + scrollPosition) {
+                block.classList.add('show');
+            } else {
+                block.classList.remove('show');
+            }
+        });
     }
 
-    if (trinityPosition < windowHeight / 1.5) {
-        trinityBlock.classList.add('show');
-    } else {
-        trinityBlock.classList.remove('show');
-    }
+    // Вызов обработчика события прокрутки
+    // Call the scroll event handler
+    window.addEventListener("scroll", scrollHandler);
 
-    if (rivoPosition < windowHeight / 1.5) {
-        rivoBlock.classList.add('show');
-    } else {
-        rivoBlock.classList.remove('show');
-    }
-});
+    // Вызов обработчика события resize для обновления параметров при изменении размера окна
+    // Call the resize event handler to update parameters when window size changes
+    window.addEventListener('resize', scrollHandler);
+}
+
+// Вызов функции для отображения блоков "о нас", "проекты", "навыки", "социальные ссылки", "портфолио", "тринити" и "риво"
+// Call the function to display "about", "projects", "skills", "social links", "portfolio", "trinity", and "rivo" blocks
+displayBlocksOnScroll('.about__block', 1.5);
+displayBlocksOnScroll('.projects__block', 1.5);
+displayBlocksOnScroll('.about__page-block--skills', 1.5);
+displayBlocksOnScroll('.about__page-block--socials', 1.5);
+displayBlocksOnScroll('.projects__card-portfolio', 1.5);
+displayBlocksOnScroll('.projects__card-trinity', 1.5);
+displayBlocksOnScroll('.projects__card-rivo', 1.5);
+
 
 
 // Плавное появление блоков
 
+// Функция для плавного появления элементов при прокрутке страницы
+// Function for smooth appearance of elements on scroll
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
@@ -121,6 +80,8 @@ for (let elm of elements) {
 }
 
 /*====== BURGER ======*/
+// Функция для открытия/закрытия меню бургер
+// Function to toggle burger menu
 function burgerMenu() {
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.menu');
@@ -129,18 +90,24 @@ function burgerMenu() {
     menu.classList.toggle('active');
 
     // Если меню открыто, блокируем прокрутку страницы
+    // If the menu is open, lock scrolling of the page
     if (menu.classList.contains('active')) {
         // Добавляем класс, который блокирует прокрутку
+        // Add the class that locks scrolling
         document.body.style.overflow = 'hidden';
     } else {
         // Если меню закрыто, разблокируем прокрутку страницы
+        // If the menu is closed, unlock scrolling of the page
         document.body.style.overflow = '';
     }
 }
 
+// Обработчик события resize для блокировки скролла на мобильных устройствах
+// Resize event handler to lock scroll on mobile devices
 window.addEventListener('resize', function() {
     const menu = document.querySelector('.menu');
     // Проверяем, открыто ли меню, и блокируем скролл только при необходимости
+    // Check if the menu is open, and lock scrolling only when necessary
     if (menu.classList.contains('active') && window.innerWidth <= 1024) {
         document.body.style.overflowY = 'hidden';
     } else {
@@ -152,6 +119,8 @@ window.addEventListener('resize', function() {
 
 /* SmoothScroll */
 
+// Плавная прокрутка к якорю при нажатии на ссылку
+// Smooth scroll to anchor on link click
 document.querySelectorAll('a[href^="#"').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -174,26 +143,29 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 });
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-    let titleBlock = document.querySelector(".about__page-block--title");
-    let titlePageBlock = document.querySelector(".about__page-title");
+// Функция для добавления класса "active" элементам при загрузке страницы
+// Function to add the "active" class to elements on page load
+function addActiveClassOnLoad(selector) {
+    const blocks = document.querySelectorAll(selector);
 
-    if (titleBlock && titlePageBlock) {
-        titleBlock.classList.add("active");
-        titlePageBlock.classList.add("active");
+    // Проверяем, существуют ли элементы, которым нужно добавить класс "active"
+    // Check if there are elements to which the "active" class should be added
+    if (blocks.length > 0) {
+        // Добавляем класс "active" каждому найденному элементу
+        // Add the "active" class to each found element
+        blocks.forEach(function(block) {
+            block.classList.add('active');
+        });
     }
-});
+}
 
+// Вызов функции для добавления класса "active" блокам "о нас" и "проекты"
+// Call the function to add the "active" class to "about" and "projects" blocks
+addActiveClassOnLoad('.about__page-block--title');
+addActiveClassOnLoad('.about__page-title');
+addActiveClassOnLoad('.projects__page-block--title');
+addActiveClassOnLoad('.projects__page-title');
 
-     document.addEventListener("DOMContentLoaded", function() {
-    let titleBlock = document.querySelector(".projects__page-block--title");
-    let titlePageBlock = document.querySelector(".projects__page-title");
-
-    if (titleBlock && titlePageBlock) {
-        titleBlock.classList.add("active");
-        titlePageBlock.classList.add("active");
-    }
-});
 
 
  document.addEventListener('DOMContentLoaded', function() {
@@ -224,6 +196,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 
 
 // PRELOADER
+// Preloader
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
@@ -239,10 +212,56 @@ function goBack() {
             window.location.href = prevPage;
         }
 
-// Замена языка
-function changeLanguage() {
-            let select = document.getElementById("langSelect");
-            let lang = select.options[select.selectedIndex].value;
-            let url = window.location.href.split('?')[0]; // Получаем URL без параметров
-            window.location.href = url + "?lang=" + lang;
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

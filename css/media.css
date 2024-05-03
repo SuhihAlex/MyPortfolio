@@ -28,6 +28,15 @@
 }
 
 @media (max-width: 1280px) {
+    .hero__title-ru {
+            height: 150px;
+            font-size: 170px;
+        }
+
+        .hero__background-block {
+            padding-bottom: 150px;
+        }
+
     .projects__block-img img {
         max-width: 350px;
     }
@@ -110,6 +119,11 @@
         font-size: 280px;
     }
 
+    .hero__title-ru {
+        height: 129px;
+        font-size: 135px;
+    }
+
     .hero__subtitle {
         font-size: 20px;
     }
@@ -136,8 +150,16 @@
         max-width: 275px;
     }
 
+    .projects__title-ru {
+        font-size: 33px;
+    }
+
     .contacts__title {
         font-size: 100px;
+    }
+
+    .contacts__title-ru {
+        font-size: 56px;
     }
 
     .contacts__form {
@@ -215,6 +237,10 @@
         font-size: 55px;
     }
 
+    .projects__title-ru {
+        font-size: 23px;
+    }
+
     .projects__card {
         grid-column: 12 span;
         max-width: 100%;
@@ -262,6 +288,10 @@
         align-items: center;
         margin-bottom: 20px;
         max-width: 100%;
+    }
+
+    .contacts__title-ru {
+        margin-bottom: 30px;
     }
 
     .about__page-content--descr {
@@ -323,6 +353,11 @@
         height: 130px;
         font-size: 180px;
     }
+
+        .hero__title-ru {
+            height: 55px;
+            font-size: 53px;
+        }
 
     .hero__subtitle {
         font-size: 14px;

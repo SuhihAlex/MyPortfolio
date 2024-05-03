@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>ASFrontEnd</title>
+</head>
+<body class="page__body">
+    <div class="preloader">
+        <div class="preloader__spinner"></div>
+    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    <header class="header">
+        <div class="container header__block">
+
+            <nav class="header__nav scrollto">
+                <ul class="header__list list-reset">
+                    <li class="header__item"><a href="#" class="header__link active">Главная</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link">Обо мне</a></li>
+                    <li class="header__item"><a href="projects.html" class="header__link">Проекты</a></li>
+                    <li class="header__item"><a href="news.html" class="header__link">Новости</a></li>
+                    <li class="header__item"><a href="error.html" class="header__link">Блог</a></li>
+                    <li class="header__item"><a href="contacts.html" class="header__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="lightning"></div>
+
+            <div class="burger" onclick="burgerMenu()">
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
+            </div>
+            <nav class="menu">
+
+                <ul class="menu__list list-reset">
+                    <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link">Обо мне</a></li>
+                    <li class="menu__item"><a href="projects.html" class="menu__link">Проекты</a></li>
+                    <li class="menu__item"><a href="news.html" class="menu__link">Новости</a></li>
+                    <li class="menu__item"><a href="error.html" class="menu__link">Блог</a></li>
+                    <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__background-block">
+                <h2 class="hero__background-title left">Дизайнер UI/UX</h2>
+                <h2 class="hero__background-title right">Фронтенд Разработчик</h2>
+            </div>
+            <div class="container hero__block block">
+                <p class="hero__descr">Привет, я</p>
+                <h1 class="hero__title hero__title-ru">
+                    Александр
+                </h1>
+                <p class="hero__subtitle">
+                    В настоящее время я изучаю FrontEnd-разработку
+                </p>
+                <div class="hero__block-link">
+                    <a href="https://www.instagram.com/alexandr_suhih/" class="hero__link" target="_blank">
+                        <img src="img/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://github.com/SuhihAlex?tab=repositories" class="hero__link" target="_blank">
+                        <img src="img/github.svg" alt="GitHub">
+                    </a>
+                    <a href="error.html" class="hero__link" target="_blank">
+                        <img src="img/linkedin.svg" alt="Linkedin">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__block">
+                    <h2 class="about__title">Обо мне</h2>
+                    <p class="about__descr">
+                        Привет, я Александр, увлеченный созданием решений, ориентированных на пользователя. Я&nbsp;специализируюсь на&nbsp;UI/UX
+                        дизайне,
+                        фронтенд-разработке и графическом дизайне, я&nbsp;владею&nbsp;HTML, CSS, JavaScript, Node.js, jQuery, Bootstrap
+                        и Figma. Помимо кодинга, я&nbsp;люблю играть в видеоигры, заниматься графическим дизайном и слушать&nbsp;музыку.
+                        Давайте&rsquo;пообщаемся
+                        пообщаемся и воплотим ваши цифровые идеи в&nbsp;жизнь
+                    </p>
+                    <div class="about__block-link">
+                        <a href="about.html" class="about__link">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="projects__block">
+                    <div class="projects__recent-block">
+                        <h2 class="projects__title projects__title-ru">Последние проекты</h2>
+                        <a href="projects.html" class="projects__link">Смотреть все</a>
+                    </div>
+                    <div class="projects__content">
+                        <a href="portfolio.html" class="projects__card projects__card-portfolio">
+                            <div class="projects__block-img portfolio">
+                                <img src="img/projects/portfolio.png" alt="Portfolio">
+                            </div>
+                            <div class="projects__card-text">
+                                <h3 class="projects__card-title">Portfolio</h3>
+                                <span class="projects__technology">Фронтенд</span>
+                                <p class="projects__descr">
+                                    Разработанный для&nbsp;демонстрации моих&nbsp;навыков в&nbsp;веб-разработке, мой&nbsp;сайт-портфолио демонстрирует
+                                    владение
+                                    в&nbsp;таких технологиях, как&nbsp;HTML, CSS, JS&nbsp;и Figma.
+                                </p>
+                                <div class="projects__block-icon">
+                                    <img src="img/file_type_html_icon_130541.svg" alt="HTML">
+                                    <img src="img/file_type_css_icon_130661.svg" alt="CSS">
+                                    <img src="img/javascript_icon_130900.svg" alt="JavaScript">
+                                    <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="trinity.html" class="projects__card projects__card-trinity">
+                            <div class="bkl projects__block-img">
+                                <img src="img/projects/Trinity.png" alt="Trinity">
+                            </div>
+                            <div class="projects__card-text">
+                                <h3 class="projects__card-title">Trinity</h3>
+                                <span class="projects__technology">Фронтенд</span>
+                                <p class="projects__descr">
+                                    Созданный для&nbsp;демонстрации моих&nbsp;навыков веб-разработки, сайт проката автомобилей в Дубае демонстрирует
+                                    мастерство владения
+                                    таких&nbsp;технологий, как&nbsp;HTML, CSS, JS, PHP и Figma.
+                                </p>
+                                <div class="projects__block-icon">
+                                    <img src="img/file_type_html_icon_130541.svg" alt="HTML">
+                                    <img src="img/file_type_css_icon_130661.svg" alt="CSS">
+                                    <img src="img/javascript_icon_130900.svg" alt="JavaScript">
+                                    <img src="img/php_horizontal_logo_icon_170852.svg" alt="PHP">
+                                    <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="rivo.html" class="projects__card projects__card-rivo">
+                            <div class="rivo projects__block-img">
+                                <img src="img/projects/Rivo.png" alt="Rivo">
+                            </div>
+                            <div class="projects__card-text">
+                                <h3 class="projects__card-title">Rivo</h3>
+                                <span class="projects__technology">Фронтенд</span>
+                                <p class="projects__descr">
+                                    Сайт Rivo - это&nbsp;многостраничный сайт с множеством сложных элементов, в этом проекте использовались HTML, CSS, JS,
+                                    jQuery, PHP
+                                    и построен с помощью Gulp
+                                </p>
+                                <div class="projects__block-icon">
+                                    <img src="img/file_type_html_icon_130541.svg" alt="HTML">
+                                    <img src="img/file_type_css_icon_130661.svg" alt="CSS">
+                                    <img src="img/javascript_icon_130900.svg" alt="JavaScript">
+                                    <img src="img/php_horizontal_logo_icon_170852.svg" alt="PHP">
+                                    <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts__block">
+                    <div class="contacts__block-content">
+                        <h2 class="contacts__title contacts__title-ru">
+                            Свяжитесь со мной
+                        </h2>
+                        <p class="contacts__subtitle">
+                            Если&nbsp;вы заинтересовались&nbsp;моей&nbsp;работой или&nbsp;хотите&nbsp;оставить отзыв об этом сайте, я&nbsp;открыт
+                            для&nbsp;обмена идеями.
+                            для&nbsp;обмена идеями.
+                        </p>
+                    </div>
+                    <form action="#" method="post" class="contacts__form">
+                        <div class="form__group">
+                            <label class="form__label" for="name">Имя</label>
+                            <input class="form__input" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="email">Емайл</label>
+                            <input class="form__input" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="message">Сообщение</label>
+                            <textarea class="form__text" name="message" id="message" rows="4" required></textarea>
+                        </div>
+                        <button class="form__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__block block">
+                <div class="footer__content">
+                    <h2 class="footer__title">Alex.</h2>
+                    <p class="footer__subtitle">
+                        I&nbsp;am a&nbsp;web developer living in&nbsp;Moldova. I&nbsp;have a&nbsp;very deep passion for Front End Development <span>❤</span>
+                        This site is&nbsp;made with a&nbsp;lot of&nbsp;love and passion.
+                    </p>
+                    <div class="footer__block-socials">
+                        <a href="https://www.instagram.com/" class="footer__link" target="_blank">
+                            <img src="img/instagram.svg" alt="Instagram">
+                        </a>
+                        <a href="https://github.com/SuhihAlex?tab=repositories" class="footer__link" target="_blank">
+                            <img src="img/github.svg" alt="GitHub">
+                        </a>
+                        <a href="mailto:suhih-alexandr@mail.ru" class="hero__link" target="_blank">
+                            <svg class="mail" xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24">
+                                <path
+                                    d="M3.84674576,17.8602756 C4.0442161,17.955959 4.26584099,18.0096122 4.49999728,18.0096122 L19.5,18.0096122 C19.734157,18.0096122 19.9557825,17.9559587 20.1532533,17.8602747 L14.2446247,12.2992125 L12.3178536,13.8859651 C12.1332257,14.0380116 11.8667743,14.0380116 11.6821464,13.8859651 L9.75537533,12.2992125 L3.84674576,17.8602756 L3.84674576,17.8602756 Z M3.1430925,17.1498223 C3.1477226,17.1451097 3.15246435,17.1404678 3.15731765,17.1359 L8.97720082,11.6583629 L3.18214637,6.88596512 C3.16950983,6.87555855 3.15751523,6.86466152 3.14616744,6.85332433 C3.05246763,7.04913384 2.99999728,7.26843937 2.99999728,7.5 L2.99999728,16.5096122 C2.99999728,16.7386275 3.05132045,16.9556556 3.1430925,17.1498223 L3.1430925,17.1498223 Z M20.8569057,17.1498204 C20.9486772,16.9556542 21,16.7386268 21,16.5096122 L21,7.5 C21,7.26844009 20.94753,7.04913522 20.8538307,6.85332617 C20.8424835,6.86466269 20.8304895,6.87555911 20.8178536,6.88596512 L15.0227992,11.6583629 L20.8426823,17.1359 C20.847535,17.1404672 20.8522762,17.1451085 20.8569057,17.1498204 L20.8569057,17.1498204 Z M20.1444281,6.14509696 C19.9491886,6.05206979 19.7306751,6 19.5,6 L4.49999728,6 C4.26932289,6 4.05080997,6.05206949 3.85557086,6.14509614 L12,12.8522731 L20.1444281,6.14509696 L20.1444281,6.14509696 Z M4.49999728,5 L19.5,5 C20.8807119,5 22,6.11928813 22,7.5 L22,16.5096122 C22,17.8903241 20.8807119,19.0096122 19.5,19.0096122 L4.49999728,19.0096122 C3.11928541,19.0096122 1.99999728,17.8903241 1.99999728,16.5096122 L1.99999728,7.5 C1.99999728,6.11928813 3.11928541,5 4.49999728,5 Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <small>
+                        Portfolio v2.0
+                        © 2024 Alex
+                    </small>
+                    <div class="header__block-language">
+                        <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                            <option class="header__language-lang" value="en">EN</option>
+                            <option class="header__language-lang" value="ru">RU</option>
+                            <option class="header__language-lang" value="ro">RO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

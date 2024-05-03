@@ -1,0 +1,36 @@
+{
+  "en": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "news": "News",
+    "blog": "Blog",
+    "contact": "Contact",
+    "aboutTitle": "About me",
+    "aboutDescription": "Hi, I'm Alexander, passionate about creating user-centered solutions...",
+    "aboutLink": "More..."
+  },
+  "ru": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "projects": "Проекты",
+    "news": "Новости",
+    "blog": "Блог",
+    "contact": "Контакты",
+    "aboutTitle": "Обо мне",
+    "aboutDescription": "Привет, я Александр, увлеченный созданием решений, ориентированных на пользователя...",
+    "aboutLink": "Подробнее..."
+  },
+  "ro": {
+    "home": "Acasă",
+    "about": "Despre mine",
+    "projects": "Proiecte",
+    "news": "Noutăți",
+    "blog": "Blog",
+    "contact": "Contact",
+    "aboutTitle": "Despre mine",
+    "aboutDescription": "Salut, sunt Alexandru, pasionat de crearea de soluții centrate pe utilizator...",
+    "aboutLink": "Mai mult..."
+  }
+
+}

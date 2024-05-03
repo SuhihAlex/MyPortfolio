@@ -136,3 +136,27 @@ a {
     opacity: 1;
     transition: opacity 3s;
 }
+
+/* Общие стили для скроллбара */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Ширина скроллбара */
+}
+
+/* Фоновая дорожка скроллбара */
+::-webkit-scrollbar-track {
+    background: var(--neon-green);
+    /* Цвет фона */
+}
+
+/* "Бегунок" скроллбара */
+::-webkit-scrollbar-thumb {
+    background: var(--black-blue);
+    /* Цвет "бегунка" */
+}
+
+/* При наведении курсора на скроллбар */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue);
+    /* Измененный цвет "бегунка" */
+}

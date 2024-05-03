@@ -1309,3 +1309,13 @@ body.loaded .preloader {
 .news__descr-link {
     color: var(--neon-green);
 }
+
+
+
+.hero__title-ru {
+    font-size: 230px;
+}
+
+.contacts__title-ru {
+    font-size: 105px;
+}

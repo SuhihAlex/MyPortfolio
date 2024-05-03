@@ -18,39 +18,38 @@
     <div class="progress-bar" id="progressBar"></div>
     <header class="header">
         <div class="container header__block">
-
+    
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
-                    <li class="header__item"><a href="#" class="header__link active">Home</a></li>
-                    <li class="header__item"><a href="about.html" class="header__link">About me</a></li>
-                    <li class="header__item"><a href="projects.html" class="header__link">Projects</a></li>
-                    <li class="header__item"><a href="news.html" class="header__link">News</a></li>
-                    <li class="header__item"><a href="error.html" class="header__link">Blog</a></li>
-                    <li class="header__item"><a href="contacts.html" class="header__link">Contact</a></li>
+                    <li class="header__item"><a href="#" class="header__link active" data-lang-key="home">Home</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">About me</a></li>
+                    <li class="header__item"><a href="projects.html" class="header__link" data-lang-key="projects">Projects</a></li>
+                    <li class="header__item"><a href="news.html" class="header__link" data-lang-key="news">News</a></li>
+                    <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
+                    <li class="header__item"><a href="contacts.html" class="header__link" data-lang-key="contact">Contact</a></li>
                 </ul>
             </nav>
-
-
+    
             <div class="lightning"></div>
-
+    
             <div class="burger" onclick="burgerMenu()">
                 <div class="burger__bar"></div>
                 <div class="burger__bar"></div>
                 <div class="burger__bar"></div>
             </div>
             <nav class="menu">
-
                 <ul class="menu__list list-reset">
-                    <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="about.html" class="menu__link">About me</a></li>
-                    <li class="menu__item"><a href="projects.html" class="menu__link">Projects</a></li>
-                    <li class="menu__item"><a href="news.html" class="menu__link">News</a></li>
-                    <li class="menu__item"><a href="error.html" class="menu__link">Blog</a></li>
-                    <li class="menu__item"><a href="contacts.html" class="menu__link">Contact</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-lang-key="home">Home</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">About me</a></li>
+                    <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Projects</a></li>
+                    <li class="menu__item"><a href="news.html" class="menu__link" data-lang-key="news">News</a></li>
+                    <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
+                    <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
         <section class="hero">
             <div class="hero__background-block">
@@ -81,7 +80,7 @@
         <section class="about" id="about">
             <div class="container">
                 <div class="about__block">
-                    <h2 class="about__title">About me</h2>
+                    <h2 class="about__title" data-lang-key="aboutTitle">About me</h2>
                     <p class="about__descr">
                         Hi, I&rsquo;m Alexander, passionate about creating user-centered solutions. I&nbsp;specialize in&nbsp;UI/UX design,
                         frontend development and graphic design, I&nbsp;am proficient in&nbsp;HTML, CSS, JavaScript, Node.js, jQuery, Bootstrap
@@ -225,7 +224,7 @@
                     </small>
                     <div class="header__block-language">
                         <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
-                            <option class="header__language-lang active" value="en">EN</option>
+                            <option class="header__language-lang" value="en">EN</option>
                             <option class="header__language-lang" value="ru">RU</option>
                             <option class="header__language-lang" value="ro">RO</option>
                         </select>
@@ -234,6 +233,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/language.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
