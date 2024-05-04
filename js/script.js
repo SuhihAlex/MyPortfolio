@@ -212,7 +212,54 @@ function goBack() {
             window.location.href = prevPage;
         }
 
+// Замена языка
+        function changeLanguage() {
+        var select = document.getElementById("langSelect");
+        var selectedValue = select.value;
+        if (selectedValue === "ru") {
+            // Переадресация на русскую версию сайта
+            window.location.href = "../../MyPortfolioRus/index.html";
+        }
+    }
 
+
+   $(document).ready(function() {
+            $('#contactForm').submit(function(e) {
+                e.preventDefault();
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var message = $('#message').val();
+                
+                // Проверка заполненности полей
+                if(name === '' || email === '' || message === '') {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+                
+                // Отправка данных формы на сервер
+                $.ajax({
+                    type: 'POST',
+                    url: 'send_email.php', // Путь к файлу обработчику на сервере
+                    data: {
+                        name: name,
+                        email: email,
+                        message: message
+                    },
+                    success: function(response) {
+                        alert('Message sent successfully!');
+                        $('#contactForm')[0].reset(); // Сброс формы после успешной отправки
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                        alert('There was an error sending your message. Please try again later.');
+                    }
+                });
+            });
+             // Закрытие модального окна при клике на крестик
+        $('.close').click(function() {
+            $('#myModal').css('display', 'none');
+        });
+        });
 
 
 

@@ -33,13 +33,13 @@
     
             <div class="lightning"></div>
 
-            <div class="header__block-language">
+            <!-- <div class="header__block-language">
                 <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
                     <option class="header__language-lang" value="en">EN</option>
                     <option class="header__language-lang" value="ru">RU</option>
                     <option class="header__language-lang" value="ro">RO</option>
                 </select>
-            </div>
+            </div> -->
     
             <div class="burger" onclick="burgerMenu()">
                 <div class="burger__bar"></div>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="projects__card-text">
                                 <h3 class="projects__card-title" data-lang-key="portfolioTitle">Portfolio</h3>
-                                <span class="projects__technology" data-lang-key="portfolioTechnology">Frontend</span>
+                                <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
                                 <p class="projects__descr" data-lang-key="portfolioDescription">
                                     Developed to showcase my skills in web development, my portfolio website exemplifies
                                     proficiency in technologies such as HTML, CSS, JS and Figma.
@@ -132,7 +132,7 @@
                             </div>
                             <div class="projects__card-text">
                                 <h3 class="projects__card-title" data-lang-key="trinityTitle">Trinity</h3>
-                                <span class="projects__technology" data-lang-key="trinityTechnology">Frontend</span>
+                                <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
                                 <p class="projects__descr" data-lang-key="trinityDescription">
                                     Created to showcase my web development skills, the car hire dubai website demonstrates
                                     mastery of technologies such as HTML, CSS, JS, PHP and Figma.
@@ -152,7 +152,7 @@
                             </div>
                             <div class="projects__card-text">
                                 <h3 class="projects__card-title" data-lang-key="rivoTitle">Rivo</h3>
-                                <span class="projects__technology" data-lang-key="rivoTechnology">Frontend</span>
+                                <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
                                 <p class="projects__descr" data-lang-key="rivoDescription">
                                     Rivo website is a multi-page website with many complex elements, this project used HTML,
                                     CSS, JS, jQuery, PHP and built using Gulp
@@ -180,7 +180,7 @@
                             exchanging ideas.
                         </p>
                     </div>
-                    <form action="#" method="post" class="contacts__form">
+                    <form id="contactForm" class="contacts__form">
                         <div class="form__group">
                             <label class="form__label" for="name" data-lang-key="nameLabel">Name</label>
                             <input class="form__input" type="text" id="name" name="name" required>
@@ -193,30 +193,36 @@
                             <label class="form__label" for="message" data-lang-key="messageLabel">Message</label>
                             <textarea class="form__text" name="message" id="message" rows="4" required></textarea>
                         </div>
-                        <button class="form__btn" type="submit" data-lang-key="sendButton">Send</button>
+                        <button id="submitButton" class="form__btn" type="submit" data-lang-key="sendButton">Send</button>
                     </form>
                 </div>
             </div>
         </section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Thank you for your message!</p>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
             <div class="footer__block block">
                 <div class="footer__content">
-                    <h2 class="footer__title" data-lang-key="footerTitle">Alex.</h2>
-                    <p class="footer__subtitle" data-lang-key="footerSubtitle">
+                    <h2 class="footer__title">Alex.</h2>
+                    <p class="footer__subtitle">
                         I am a web developer living in Moldova. I have a very deep passion for Front End Development ❤ This
                         site is made with a lot of love and passion.
                     </p>
                     <small>
-                        <span data-lang-key="portfolioVersion">Portfolio v2.0</span>
+                        <span>Portfolio v2.0</span>
                         © 2024 Alex
                     </small>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="js/language.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

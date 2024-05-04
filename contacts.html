@@ -65,7 +65,7 @@
                             exchanging ideas.
                         </p>
                     </div>
-                    <form action="#" method="post" class="contacts__form">
+                    <form id="contactForm" class="contacts__form">
                         <div class="form__group">
                             <label class="form__label" for="name" data-lang-key="nameLabel">Name</label>
                             <input class="form__input" type="text" id="name" name="name" required>
@@ -78,11 +78,17 @@
                             <label class="form__label" for="message" data-lang-key="messageLabel">Message</label>
                             <textarea class="form__text" name="message" id="message" rows="4" required></textarea>
                         </div>
-                        <button class="form__btn" type="submit" data-lang-key="sendButton">Send</button>
+                        <button id="submitButton" class="form__btn" type="submit" data-lang-key="sendButton">Send</button>
                     </form>
                 </div>
             </div>
         </section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Thank you for your message!</p>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -97,18 +103,10 @@
                         <span data-lang-key="portfolioVersion">Portfolio v2.0</span>
                         © 2024 Alex
                     </small>
-                    <div class="header__block-language">
-                        <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
-                            <option class="header__language-lang" value="en">EN</option>
-                            <option class="header__language-lang" value="ru">RU</option>
-                            <option class="header__language-lang" value="ro">RO</option>
-                        </select>
-                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="js/language.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

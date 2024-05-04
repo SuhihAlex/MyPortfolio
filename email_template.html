@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/style_mail.css">
+    <title>New Message from Website</title>
+</head>
+<body>
+    <div class="container email__block">
+        <h2>New Message from Website</h2>
+        <p><strong>Name:</strong>
+            <?php echo $name; ?>
+        </p>
+        <p><strong>Email:</strong>
+            <?php echo $email; ?>
+        </p>
+        <div class="message">
+            <p><strong>Message:</strong></p>
+            <p>
+                <?php echo nl2br($message); ?>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

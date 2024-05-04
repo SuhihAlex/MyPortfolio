@@ -18,14 +18,16 @@
     <div class="progress-bar" id="progressBar"></div>
     <header class="header">
         <div class="container header__block">
+    
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
-                    <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
-                    <li class="header__item"><a href="about.html" class="header__link">About me</a></li>
-                    <li class="header__item"><a href="#projects" class="header__link active">Projects</a></li>
-                    <li class="header__item"><a href="news.html" class="header__link">News</a></li>
-                    <li class="header__item"><a href="error.html" class="header__link">Blog</a></li>
-                    <li class="header__item"><a href="contacts.html" class="header__link">Contact</a></li>
+                    <li class="header__item"><a href="index.html" class="header__link" data-lang-key="home">Home</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">About me</a>
+                    </li>
+                    <li class="header__item"><a href="#" class="header__link active" data-lang-key="projects">Projects</a></li>
+                    <li class="header__item"><a href="news.html" class="header__link" data-lang-key="news">News</a></li>
+                    <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
+                    <li class="header__item"><a href="contacts.html" class="header__link" data-lang-key="contact">Contact</a></li>
                 </ul>
             </nav>
     
@@ -38,12 +40,14 @@
             </div>
             <nav class="menu">
                 <ul class="menu__list list-reset">
-                    <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="about.html" class="menu__link">About me</a></li>
-                    <li class="menu__item"><a href="projects.html" class="menu__link">Projects</a></li>
-                    <li class="menu__item"><a href="news.html" class="menu__link">News</a></li>
-                    <li class="menu__item"><a href="error.html" class="menu__link">Blog</a></li>
-                    <li class="menu__item"><a href="contacts.html" class="menu__link">Contact</a></li>
+                    <li class="menu__item"><a href="index.html" class="menu__link" data-lang-key="home">Home</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">About me</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-lang-key="projects">Projects</a>
+                    </li>
+                    <li class="menu__item"><a href="news.html" class="menu__link" data-lang-key="news">News</a></li>
+                    <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
+                    <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -52,7 +56,7 @@
         <section class="projects__page">
             <div class="container">
                 <div class="projects__page-block--title about__page-block--title">
-                    <h1 class="projects__page-title about__page-title">Projects</h1>
+                    <h1 class="projects__page-title about__page-title" data-lang-key="projects">Projects</h1>
                 </div>
                 <div class="projects__page-content" id="projects-content">
                     <a href="portfolio.html" class="projects__card projects__card-animation">
@@ -60,9 +64,9 @@
                             <img src="img/projects/portfolio.png" alt="Portfolio">
                         </div>
                         <div class="projects__card-text">
-                            <h3 class="projects__card-title">Portfolio</h3>
-                            <span class="projects__technology">Frontend</span>
-                            <p class="projects__descr">
+                            <h3 class="projects__card-title" data-lang-key="portfolioTitle">Portfolio</h3>
+                            <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
+                            <p class="projects__descr" data-lang-key="portfolioDescription">
                                 Developed to&nbsp;showcase my&nbsp;skills in&nbsp;web development, my&nbsp;portfolio website exemplifies
                                 proficiency
                                 in&nbsp;technologies such as&nbsp;HTML, CSS, JS&nbsp;and Figma.
@@ -80,9 +84,9 @@
                             <img src="img/projects/Trinity.png" alt="Trinity">
                         </div>
                         <div class="projects__card-text">
-                            <h3 class="projects__card-title">Trinity</h3>
-                            <span class="projects__technology">Frontend</span>
-                            <p class="projects__descr">
+                            <h3 class="projects__card-title" data-lang-key="trinityTitle">Trinity</h3>
+                            <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
+                            <p class="projects__descr" data-lang-key="trinityDescription">
                                 Created to&nbsp;showcase my&nbsp;web development skills, the car hire dubai website demonstrates mastery
                                 of&nbsp;technologies such as&nbsp;HTML, CSS, JS, PHP and Figma.
                             </p>
@@ -100,9 +104,9 @@
                             <img src="img/projects/Rivo.png" alt="Rivo">
                         </div>
                         <div class="projects__card-text">
-                            <h3 class="projects__card-title">Rivo</h3>
-                            <span class="projects__technology">Frontend</span>
-                            <p class="projects__descr">
+                            <h3 class="projects__card-title" data-lang-key="rivoTitle">Rivo</h3>
+                            <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
+                            <p class="projects__descr" data-lang-key="rivoDescription">
                                 Rivo website is&nbsp;a&nbsp;multi-page website with many complex elements, this project used HTML, CSS, JS,
                                 jQuery, PHP
                                 and built using Gulp
@@ -122,8 +126,8 @@
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Blanchard</h3>
-                            <span class="projects__technology">Layout</span>
-                            <p class="projects__descr">
+                            <span class="projects__technology" data-lang-key="layout">Layout</span>
+                            <p class="projects__descr" data-lang-key="portfolioBlanchard">
                                 The Blanchard website is&nbsp;a&nbsp;single page website with animations, HTML and CSS were used in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
@@ -138,8 +142,8 @@
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Evklid</h3>
-                            <span class="projects__technology">Layout</span>
-                            <p class="projects__descr">
+                            <span class="projects__technology" data-lang-key="layout">Layout</span>
+                            <p class="projects__descr" data-lang-key="portfolioEvklid">
                                 The Evklid website is&nbsp;a&nbsp;single page website with animations, HTML and CSS were used
                                 in&nbsp;this project.
                             </p>
@@ -155,8 +159,8 @@
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Finsweet</h3>
-                            <span class="projects__technology">Frontend</span>
-                            <p class="projects__descr">
+                            <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
+                            <p class="projects__descr" data-lang-key="portfolioFinsweet">
                                 The Finsweet website is&nbsp;a&nbsp;multi-page website with many complex elements, HTML, CSS and&nbsp;JS were used
                                 in&nbsp;this project.
                             </p>
@@ -174,8 +178,8 @@
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Recidiviz</h3>
-                            <span class="projects__technology">Frontend</span>
-                            <p class="projects__descr">
+                            <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
+                            <p class="projects__descr" data-lang-key="portfolioRecidiviz">
                                 Recidiviz website is&nbsp;a&nbsp;one-page website with many complex elements, HTML, CSS and&nbsp;JS were used
                                 in&nbsp;this project.
                             </p>
@@ -193,8 +197,8 @@
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Robin W</h3>
-                            <span class="projects__technology">Frontend</span>
-                            <p class="projects__descr">
+                            <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
+                            <p class="projects__descr" data-lang-key="portfolioRobin">
                                 Robin W&rsquo;s website. &mdash;&nbsp;is&nbsp;a&nbsp;one-page web designer portfolio site, this project used HTML, CSS,
                                 JS, jQuery and the Gulp builder.
                             </p>
@@ -213,8 +217,8 @@
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">VR Nas</h3>
-                            <span class="projects__technology">Frontend</span>
-                            <p class="projects__descr">
+                            <span class="projects__technology" data-lang-key="rusTechnology">Frontend</span>
+                            <p class="projects__descr" data-lang-key="portfolioVr">
                                 The VR&nbsp;Nas website is&nbsp;a&nbsp;multi-page cutting edge technology website, HTML, CSS, JS&nbsp;and jQuery were
                                 used in&nbsp;this project.
                             </p>
@@ -233,8 +237,8 @@
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">W-wave Radio</h3>
-                            <span class="projects__technology">Layout</span>
-                            <p class="projects__descr">
+                            <span class="projects__technology" data-lang-key="layout">Layout</span>
+                            <p class="projects__descr" data-lang-key="portfolioWave">
                                 W-wave Radio website is&nbsp;a&nbsp;one-page radio website, HTML, CSS were used in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
@@ -252,36 +256,19 @@
         <div class="container">
             <div class="footer__block block">
                 <div class="footer__content">
-                    <h2 class="footer__title">Alex.</h2>
-                    <p class="footer__subtitle">
-                        I&nbsp;am a&nbsp;web developer living in&nbsp;Moldova. I&nbsp;have a&nbsp;very deep passion for
-                        Front End Development <span>❤</span>
-                        This site is&nbsp;made with a&nbsp;lot of&nbsp;love and passion.
+                    <h2 class="footer__title" data-lang-key="footerTitle">Alex.</h2>
+                    <p class="footer__subtitle" data-lang-key="footerSubtitle">
+                        I am a web developer living in Moldova. I have a very deep passion for Front End Development ❤ This
+                        site is made with a lot of love and passion.
                     </p>
-                    <div class="footer__block-socials">
-                        <a href="https://www.instagram.com/" class="footer__link" target="_blank">
-                            <img src="img/instagram.svg" alt="Instagram">
-                        </a>
-                        <a href="https://github.com/SuhihAlex?tab=repositories" class="footer__link" target="_blank">
-                            <img src="img/github.svg" alt="GitHub">
-                        </a>
-                    </div>
                     <small>
-                        Portfolio v2.0
+                        <span data-lang-key="portfolioVersion">Portfolio v2.0</span>
                         © 2024 Alex
                     </small>
-                    <div class="header__block-language">
-                        <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
-                            <option class="header__language-lang active" value="en">EN</option>
-                            <option class="header__language-lang" value="ru">RU</option>
-                            <option class="header__language-lang" value="ro">RO</option>
-                        </select>
-                    </div>
                 </div>
             </div>
         </div>
     </footer>
-
     <script src="js/script.js"></script>
 </body>
 </html>

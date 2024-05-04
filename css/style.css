@@ -1311,28 +1311,54 @@ body.loaded .preloader {
 }
 
 
-
-.hero__title-ru {
-    font-size: 230px;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-.contacts__title-ru {
-    font-size: 105px;
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
 }
 
-.russian.hero__background-block {
-    padding-bottom: 140px;
+.modal-content p {
+    font-family: var(--third-family);
+    font-size: 65px;
+    line-height: 80%;
+    text-align: center;
+    color: var(--neon-green);
 }
 
-.russian.hero__title {
-    height: 175px;
-    font-size: 210px;
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--neon-green);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.russian.projects__title {
-    font-size: 50px;
-}
-
-.russian.contacts__title {
-    font-size: 86px;
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: url(../img/cursor.svg), auto;
 }
