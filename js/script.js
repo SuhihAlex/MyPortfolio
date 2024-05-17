@@ -251,42 +251,145 @@ function goBack() {
         });
         });
 
-        document.addEventListener("DOMContentLoaded", function() {
-        console.log("Document ready. Adding event listener.");
-        document.getElementById("langSelect").addEventListener("change", function() {
-        var langSelect = document.getElementById("langSelect");
-        var selectedLang = langSelect.value;
-        var currentUrl = window.location.href;
+// // // Ждем загрузки всего документа перед выполнением скрипта
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Выводим сообщение в консоль, что документ загружен и событие слушателя добавлено
+//     console.log("Document ready. Adding event listener.");
+    
+//     // Получаем элемент выпадающего списка по его идентификатору "langSelect" и добавляем к нему обработчик события "change"
+//     document.getElementById("langSelect").addEventListener("change", function() {
+//         // Получаем значение выбранного языка из выпадающего списка
+//         var langSelect = document.getElementById("langSelect");
+//         var selectedLang = langSelect.value;
         
-        console.log("Selected language:", selectedLang);
-        console.log("Current URL:", currentUrl);
+//         // Получаем текущий URL страницы
+//         var currentUrl = window.location.href;
         
-        var newUrl = currentUrl;
+//         // Выводим в консоль выбранный язык и текущий URL
+//         console.log("Selected language:", selectedLang);
+//         console.log("Current URL:", currentUrl);
         
-        if (selectedLang === "en") {
-            newUrl = newUrl.replace("/RU/", "/EN/");
-            newUrl = newUrl.replace("/RO/", "/EN/");
-        } else if (selectedLang === "ru") {
-            newUrl = newUrl.replace("/EN/", "/RU/");
-            newUrl = newUrl.replace("/RO/", "/RU/");
-        } else if (selectedLang === "ro") {
-            newUrl = newUrl.replace("/EN/", "/RO/");
-            newUrl = newUrl.replace("/RU/", "/RO/");
-        } else {
-            console.log("Language not recognized:", selectedLang);
-        }
+//         // Инициализируем переменную для нового URL
+//         var newUrl = currentUrl;
         
-        console.log("New URL:", newUrl);
+//         // В зависимости от выбранного языка, заменяем соответствующие подстроки в URL
+//         if (selectedLang === "en") {
+//             // Если выбран английский, заменяем /RU/ и /RO/ на /EN/
+//             newUrl = newUrl.replace("/RU/", "/EN/");
+//             newUrl = newUrl.replace("/RO/", "/EN/");
+//         } else if (selectedLang === "ru") {
+//             // Если выбран русский, заменяем /EN/ и /RO/ на /RU/
+//             newUrl = newUrl.replace("/EN/", "/RU/");
+//             newUrl = newUrl.replace("/RO/", "/RU/");
+//         } else if (selectedLang === "ro") {
+//             // Если выбран румынский, заменяем /EN/ и /RU/ на /RO/
+//             newUrl = newUrl.replace("/EN/", "/RO/");
+//             newUrl = newUrl.replace("/RU/", "/RO/");
+//         } else {
+//             // В случае, если выбран неизвестный язык, выводим сообщение об ошибке
+//             console.log("Language not recognized:", selectedLang);
+//         }
         
-        if (newUrl !== currentUrl) {
-            window.location.href = newUrl;
-        }
-    });
+//         // Выводим в консоль новый URL
+//         console.log("New URL:", newUrl);
+        
+//         // Если новый URL отличается от текущего, перенаправляем на новый URL
+//         if (newUrl !== currentUrl) {
+//             window.location.href = newUrl;
+//         }
+//     });
+// });
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     console.log("Document ready. Adding event listener.");
+//     document.getElementById("langSelect").addEventListener("change", function() {
+//         var langSelect = document.getElementById("langSelect");
+//         var selectedLang = langSelect.value;
+//         var currentUrl = window.location.href;
+        
+//         console.log("Selected language:", selectedLang);
+//         console.log("Current URL:", currentUrl);
+        
+//         var newUrl = currentUrl;
+        
+//         if (selectedLang !== "en") {
+//             // Для языков RU и RO добавляем подкаталог перед именем файла
+//             newUrl = newUrl.replace("/index.html", "/" + selectedLang + "/index.html");
+//         }
+        
+//         console.log("New URL:", newUrl);
+        
+//         if (newUrl !== currentUrl) {
+//             window.location.href = newUrl;
+//         }
+//     });
+// });
+
+// Ждем загрузки всего документа перед выполнением скрипта
+document.addEventListener("DOMContentLoaded", function() {
+    // Выводим сообщение в консоль, что документ загружен и событие слушателя добавлено
+    console.log("Document ready. Adding event listener.");
+    
+    // Получаем элемент выпадающего списка по его идентификатору "langSelect"
+    var langSelect = document.getElementById("langSelect");
+    
+    // Проверяем, существует ли элемент с идентификатором "langSelect"
+    if (langSelect) {
+        // Добавляем обработчик события "change"
+        langSelect.addEventListener("change", function() {
+            // Получаем значение выбранного языка из выпадающего списка
+            var selectedLang = langSelect.value;
+            
+            // Получаем текущий URL страницы
+            var currentUrl = window.location.href;
+            
+            // Выводим в консоль выбранный язык и текущий URL
+            console.log("Selected language:", selectedLang);
+            console.log("Current URL:", currentUrl);
+            
+            // Инициализируем переменную для нового URL
+            var newUrl = currentUrl;
+            
+            // Условие для замены подстрок в URL или добавления их
+            if (selectedLang === "en") {
+                // Если выбран английский, заменяем /RU/ и /RO/ на /EN/ или добавляем /EN/
+                if (newUrl.includes("/RU/") || newUrl.includes("/RO/")) {
+                    newUrl = newUrl.replace(/\/(RU|RO)\//, "/");
+                } else {
+                    newUrl = newUrl.replace("/MyPortfolio/", "/MyPortfolio/EN/");
+                }
+            } else if (selectedLang === "ru") {
+                // Если выбран русский, заменяем /EN/ и /RO/ на /RU/ или добавляем /RU/
+                if (newUrl.includes("/EN/") || newUrl.includes("/RO/")) {
+                    newUrl = newUrl.replace(/\/(EN|RO)\//, "/RU/");
+                } else {
+                    newUrl = newUrl.replace("/MyPortfolio/", "/MyPortfolio/RU/");
+                }
+            } else if (selectedLang === "ro") {
+                // Если выбран румынский, заменяем /EN/ и /RU/ на /RO/ или добавляем /RO/
+                if (newUrl.includes("/EN/") || newUrl.includes("/RU/")) {
+                    newUrl = newUrl.replace(/\/(EN|RU)\//, "/RO/");
+                } else {
+                    newUrl = newUrl.replace("/MyPortfolio/", "/MyPortfolio/RO/");
+                }
+            } else {
+                // В случае, если выбран неизвестный язык, выводим сообщение об ошибке
+                console.log("Language not recognized:", selectedLang);
+            }
+            
+            // Выводим в консоль новый URL
+            console.log("New URL:", newUrl);
+            
+            // Если новый URL отличается от текущего, перенаправляем на новый URL
+            if (newUrl !== currentUrl) {
+                window.location.href = newUrl;
+            }
+        });
+    } else {
+        console.log("Element with id 'langSelect' not found.");
+    }
 });
-
-
-
-
 
 
 
