@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/settings.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
     <title>ASFrontEnd</title>
 </head>
 <body class="page__body">
@@ -18,18 +18,30 @@
     <div class="progress-bar" id="progressBar"></div>
     <header class="header">
         <div class="container header__block">
+            <div class="block__closed"></div>
+    
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
-                    <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
-                    <li class="header__item"><a href="about.html" class="header__link">About me</a></li>
-                    <li class="header__item"><a href="projects.html" class="header__link active">Projects</a></li>
-                    <li class="header__item"><a href="news.html" class="header__link">News</a></li>
-                    <li class="header__item"><a href="error.html" class="header__link">Blog</a></li>
-                    <li class="header__item"><a href="contacts.html" class="header__link">Contact</a></li>
+                    <li class="header__item"><a href="index.html" class="header__link" data-lang-key="home">Acasă</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">Despre mine</a>
+                    </li>
+                    <li class="header__item"><a href="projects.html" class="header__link"
+                            data-lang-key="projects">Proiecte</a></li>
+                    <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
+                    <li class="header__item"><a href="contacts.html" class="header__link"
+                            data-lang-key="contact">Contacte</a></li>
                 </ul>
             </nav>
     
             <div class="lightning"></div>
+    
+            <div class="header__block-language">
+                        <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                            <option class="header__language-lang" value="ro">RO</option>
+                            <option class="header__language-lang" value="en">EN</option>
+                            <option class="header__language-lang" value="ru">RU</option>
+                        </select>
+                    </div>
     
             <div class="burger" onclick="burgerMenu()">
                 <div class="burger__bar"></div>
@@ -38,12 +50,14 @@
             </div>
             <nav class="menu">
                 <ul class="menu__list list-reset">
-                    <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="about.html" class="menu__link">About me</a></li>
-                    <li class="menu__item"><a href="projects.html" class="menu__link">Projects</a></li>
-                    <li class="menu__item"><a href="news.html" class="menu__link">News</a></li>
-                    <li class="menu__item"><a href="error.html" class="menu__link">Blog</a></li>
-                    <li class="menu__item"><a href="contacts.html" class="menu__link">Contact</a></li>
+                    <li class="menu__item"><a href="index.html" class="menu__link" data-lang-key="home">Acasă</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">Despre mine</a>
+                    </li>
+                    <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Proiecte</a>
+                    </li>
+                    <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
+                    <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contacte</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -57,8 +71,8 @@
                             <g clip-path="url(#clip0_1_743)">
                                 <path d="M21.0938 12.5H3.90625" stroke="white" stroke-width="3" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                                <path d="M10.9375 5.46875L3.90625 12.5L10.9375 19.5312" stroke="white" stroke-width="3" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                <path d="M10.9375 5.46875L3.90625 12.5L10.9375 19.5312" stroke="white" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </g>
                             <defs>
                                 <clipPath id="clip0_1_743">
@@ -66,30 +80,29 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        Back
+                        Înapoi
                     </a>
                 </div>
                 <div class="projects__preview-content block">
-                    <div class="projects__block-img recidiviz projects__preview-portfolio">
-                        <img src="img/projects/Recidiviz.png" alt="Recidiviz">
+                    <div class="projects__block-img blanchard projects__preview-portfolio">
+                        <img src="../img/projects/Blanchard.png" alt="Blanchard">
                     </div>
                     <div class="projects__preview-block--descr">
-                        <div class="projects__card-text">
-                            <h3 class="projects__card-title">Recidiviz</h3>
-                            <span class="projects__technology">Frontend</span>
+                        <div class="projects__card-text projects__card-text--preview">
+                            <h3 class="projects__card-title">Blanchard</h3>
+                            <span class="projects__technology">Aspect</span>
                             <p class="projects__descr">
-                                Recidiviz website is&nbsp;a&nbsp;one-page website with many complex elements, HTML, CSS and&nbsp;JS were used
-                                in&nbsp;this project.
+                                Site-ul Blanchard este un site de o singură pagină cu animație, în acest proiect s-au folosit
+                                HTML și CSS.
+                                proiect.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
                             </div>
                         </div>
                         <div class="projects__preview-block--btn">
-                            <a href="https://suhihalex.github.io/RecidivizProject/" class="projects__preview-link" target="_blank">
+                            <a href="https://suhihalex.github.io/Blanchard/" class="projects__preview-link" target="_blank">
                                 <svg width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M3.16843 3.75095C3.16843 2.00397 4.58878 0.583618 6.33576 0.583618H25.3397C27.0867 0.583618 28.5071 2.00397 28.5071 3.75095V16.4203H25.3397V3.75095H6.33576V16.4203H3.16843V3.75095ZM0.00109863 18.9541C0.00109863 18.4295 0.426709 18.0039 0.951298 18.0039H30.7242C31.2488 18.0039 31.6744 18.4295 31.6744 18.9541C31.6744 21.0525 29.972 22.7549 27.8736 22.7549H3.8019C1.70354 22.7549 0.00109863 21.0525 0.00109863 18.9541ZM13.9077 9.34327L12.3735 10.8774L13.9077 12.4116C14.3729 12.8768 14.3729 13.6291 13.9077 14.0893C13.4425 14.5496 12.6902 14.5545 12.23 14.0893L9.85447 11.7138C9.38927 11.2486 9.38927 10.4964 9.85447 10.0361L12.23 7.66062C12.6952 7.19542 13.4474 7.19542 13.9077 7.66062C14.3679 8.12582 14.3729 8.87806 13.9077 9.33832V9.34327ZM19.4505 7.66062L21.826 10.0361C22.2912 10.5013 22.2912 11.2536 21.826 11.7138L19.4505 14.0893C18.9853 14.5545 18.233 14.5545 17.7728 14.0893C17.3125 13.6241 17.3076 12.8719 17.7728 12.4116L19.307 10.8774L17.7728 9.34327C17.3076 8.87807 17.3076 8.12582 17.7728 7.66557C18.238 7.20532 18.9902 7.20037 19.4505 7.66557V7.66062Z"
@@ -97,7 +110,7 @@
                                 </svg>
                                 Demo
                             </a>
-                            <a href="https://github.com/SuhihAlex/RecidivizProject" class="projects__preview-link" target="_blank">
+                            <a href="https://github.com/SuhihAlex/Blanchard" class="projects__preview-link" target="_blank">
                                 <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12.8024 0C9.76273 0.000126048 6.82226 1.08185 4.50714 3.05163C2.19203 5.02141 0.653361 7.7507 0.166441 10.7511C-0.320479 13.7516 0.276128 16.8274 1.84951 19.4282C3.4229 22.029 5.87038 23.9851 8.75404 24.9465C9.39411 25.0585 9.63413 24.6745 9.63413 24.3384C9.63413 24.0344 9.61812 23.0263 9.61812 21.9542C6.40178 22.5463 5.5697 21.1702 5.31367 20.4501C5.02958 19.7498 4.57923 19.1292 4.00154 18.6419C3.55349 18.4019 2.91343 17.8098 3.98552 17.7938C4.39489 17.8382 4.78752 17.9807 5.13014 18.2091C5.47276 18.4375 5.75527 18.7451 5.95374 19.1059C6.12882 19.4204 6.36425 19.6973 6.64653 19.9207C6.92881 20.1441 7.25239 20.3096 7.59874 20.4077C7.94509 20.5058 8.30739 20.5346 8.66489 20.4924C9.02239 20.4503 9.36806 20.338 9.68209 20.162C9.7375 19.5112 10.0275 18.9028 10.4982 18.4499C7.64991 18.1299 4.67361 17.0257 4.67361 12.1293C4.65562 10.857 5.12509 9.62607 5.98574 8.68892C5.59438 7.58317 5.64017 6.36969 6.11375 5.29657C6.11375 5.29657 7.18582 4.96053 9.63411 6.60871C11.7288 6.03261 13.9401 6.03261 16.0348 6.60871C18.483 4.94454 19.5551 5.29657 19.5551 5.29657C20.0288 6.36967 20.0745 7.58318 19.6831 8.68892C20.5464 9.62447 21.0162 10.8565 20.9953 12.1293C20.9953 17.0417 18.0029 18.1299 15.1547 18.4499C15.4602 18.7595 15.6955 19.1313 15.8446 19.5399C15.9937 19.9486 16.0531 20.3845 16.0188 20.8181C16.0188 22.5303 16.0027 23.9064 16.0027 24.3385C16.0027 24.6745 16.2428 25.0746 16.8828 24.9466C19.7614 23.9773 22.2019 22.0166 23.7685 19.4145C25.3352 16.8124 25.9262 13.7381 25.4359 10.7406C24.9456 7.74305 23.406 5.0173 21.0919 3.04992C18.7778 1.08254 15.8398 0.00158084 12.8024 0Z"
@@ -109,37 +122,47 @@
                     </div>
                 </div>
                 <div class="projects__preview-block--features block">
-                    <h2 class="projects__preview-title">Main Features</h2>
+                    <h2 class="projects__preview-title">Caracteristici principale</h2>
                     <ul class="projects__preview-list">
                         <li class="projects__preview-item">
-                            Technology:
+                            Tehnologii:
                             <p class="projects__preview-descr">
-                                HTML, CSS and JavaScript were used to&nbsp;create an&nbsp;interactive web page with data visualisation.
+                                HTML: Pentru marcarea structurii paginii web.
+                                CSS: Pentru stiluri și aspect exterior.
                             </p>
                         </li>
                         <li class="projects__preview-item">
-                            Appearance:
+                            Aspect:
                             <p class="projects__preview-descr">
-                                Applying modern design and interface for better interaction with data.
+                                Aceasta este o pagină dedicată aspectelor macroeconomice sau teoriei lui Oliver Blanchard.
+                                economie.
                             </p>
                         </li>
                         <li class="projects__preview-item">
-                            Interactivity:
+                            Interactivitate:
                             <p class="projects__preview-descr">
-                                The page has elements that the user can interact with, such as&nbsp;buttons to&nbsp;select data, etc.
+                                Pagina are elemente cu care utilizatorul poate interacționa: butoane, formulare, animații etc.
                             </p>
                         </li>
                         <li class="projects__preview-item">
-                            Open Source:
+                            Receptivitate:
                             <p class="projects__preview-descr">
-                                The project is&nbsp;available in&nbsp;the public domain and its source code can be&nbsp;explored on&nbsp;the GitHub
-                                platform.
+                                Site-ul este receptiv și arată bine atât pe dispozitivele de calculator, cât și pe cele mobile.
+                            </p>
+                        </li>
+                        <li class="projects__preview-item">
+                            Sursă deschisă:
+                            <p class="projects__preview-descr">
+                                Proiectul este găzduit pe GitHub Pages, ceea ce poate însemna că este cod sursă deschis și
+                                puteți studia
+                                codul pe GitHub.
                             </p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
+
     </main>
     <footer class="footer">
         <div class="container">
@@ -147,33 +170,26 @@
                 <div class="footer__content">
                     <h2 class="footer__title">Alex.</h2>
                     <p class="footer__subtitle">
-                        I&nbsp;am a&nbsp;web developer living in&nbsp;Moldova. I&nbsp;have a&nbsp;very deep passion for
-                        Front End Development <span>❤</span>
-                        This site is&nbsp;made with a&nbsp;lot of&nbsp;love and passion.
+                        Sunt un dezvoltator web care trăiește în Moldova. Am o pasiune foarte profundă pentru dezvoltarea
+                        frontend <span>❤</span> Acest site este realizat
+                        cu multă dragoste și pasiune.
                     </p>
                     <div class="footer__block-socials">
                         <a href="https://www.instagram.com/" class="footer__link" target="_blank">
-                            <img src="img/instagram.svg" alt="Instagram">
+                            <img src="../img/instagram.svg" alt="Instagram">
                         </a>
                         <a href="https://github.com/SuhihAlex?tab=repositories" class="footer__link" target="_blank">
-                            <img src="img/github.svg" alt="GitHub">
+                            <img src="../img/github.svg" alt="GitHub">
                         </a>
                     </div>
                     <small>
-                        Portfolio v2.0
-                        © 2024 Alex
+                        <span data-lang-key="portfolioVersion">Portofoliu v2.0</span>
+                        <span data-lang-key="copyright">© 2024 Alex</span>
                     </small>
-                    <div class="header__block-language">
-                        <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
-                            <option class="header__language-lang active" value="en">EN</option>
-                            <option class="header__language-lang" value="ru">RU</option>
-                            <option class="header__language-lang" value="ro">RO</option>
-                        </select>
-                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

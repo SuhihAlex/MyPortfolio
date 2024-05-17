@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/settings.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
     <title>ASFrontEnd</title>
 </head>
 <body class="page__body">
@@ -18,6 +18,7 @@
     <div class="progress-bar" id="progressBar"></div>
     <header class="header">
         <div class="container header__block">
+            <div class="block__closed"></div>
     
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
@@ -26,7 +27,6 @@
                     </li>
                     <li class="header__item"><a href="projects.html" class="header__link"
                             data-lang-key="projects">Projects</a></li>
-                    <li class="header__item"><a href="news.html" class="header__link" data-lang-key="news">News</a></li>
                     <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
                     <li class="header__item"><a href="contacts.html" class="header__link"
                             data-lang-key="contact">Contact</a></li>
@@ -34,6 +34,14 @@
             </nav>
     
             <div class="lightning"></div>
+
+            <div class="header__block-language">
+                <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                    <option class="header__language-lang" value="en">EN</option>
+                    <option class="header__language-lang" value="ru">RU</option>
+                    <option class="header__language-lang" value="ro">RO</option>
+                </select>
+            </div>
     
             <div class="burger" onclick="burgerMenu()">
                 <div class="burger__bar"></div>
@@ -46,7 +54,6 @@
                     <li class="menu__item"><a href="#" class="menu__link" data-lang-key="about">About me</a></li>
                     <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Projects</a>
                     </li>
-                    <li class="menu__item"><a href="news.html" class="menu__link" data-lang-key="news">News</a></li>
                     <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
                     <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contact</a>
                     </li>
@@ -63,7 +70,7 @@
                 </div>
                 <div class="about__page-block--content block">
                     <div class="about__page-block--img">
-                        <img src="img/2024-04-27_01-18-29-028.jpg" alt="Foto">
+                        <img src="../img/2024-04-27_01-18-29-028.jpg" alt="Foto">
                     </div>
                     <div class="about__page-content">
                         <p class="about__page-content--descr" data-lang-key="about_text">
@@ -83,7 +90,7 @@
                             digital ideas
                             to life. Let's embark on an exciting innovation journey together!
                         </p>
-                        <a href="other/resume.pdf" class="about__page-download" data-lang-key="download_resume">
+                        <a href="#" class="about__page-download" data-lang-key="download_resume">
                             <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M11.6328 0.65625H2.85547C1.57976 0.65625 0.545654 1.69035 0.545654 2.96606V22.3685C0.545654 23.6442 1.57976 24.6783 2.85547 24.6783H16.7143C17.9901 24.6783 19.0242 23.6442 19.0242 22.3685V8.04765L11.6328 0.65625ZM10.7088 8.97158V2.5041L17.1763 8.97158H10.7088Z"
@@ -100,26 +107,26 @@
                             <h4 class="about__page-title--name" data-lang-key="skills">Skills</h4>
                         </div>
                         <div class="about__page-skills">
-                            <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                            <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                            <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                            <img src="img/jquery_plain_wordmark_logo_icon_146445.svg" alt="jQuery">
-                            <img src="img/nodejs_plain_wordmark_logo_icon_146410.svg" alt="NodeJS">
-                            <img src="img/php_horizontal_logo_icon_170852.svg" alt="PHP">
-                            <img src="img/bootstrap_plain_wordmark_logo_icon_146620.svg" alt="Bootstrap">
-                            <img src="img/git_plain_wordmark_logo_icon_146508.svg" alt="Git">
-                            <img src="img/gitlab_plain_wordmark_logo_icon_146502.svg" alt="GitLab">
-                            <img src="img/gulp_plain_logo_icon_146485.svg" alt="Gulp">
-                            <img src="img/sass_original_logo_icon_146350.svg" alt="SASS">
-                            <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                            <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                            <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                            <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                            <img src="../img/jquery_plain_wordmark_logo_icon_146445.svg" alt="jQuery">
+                            <img src="../img/nodejs_plain_wordmark_logo_icon_146410.svg" alt="NodeJS">
+                            <img src="../img/php_horizontal_logo_icon_170852.svg" alt="PHP">
+                            <img src="../img/bootstrap_plain_wordmark_logo_icon_146620.svg" alt="Bootstrap">
+                            <img src="../img/git_plain_wordmark_logo_icon_146508.svg" alt="Git">
+                            <img src="../img/gitlab_plain_wordmark_logo_icon_146502.svg" alt="GitLab">
+                            <img src="../img/gulp_plain_logo_icon_146485.svg" alt="Gulp">
+                            <img src="../img/sass_original_logo_icon_146350.svg" alt="SASS">
+                            <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                         </div>
                     </div>
                     <div class="about__page-block--socials">
                         <a href="https://www.instagram.com/" class="about__page-link" target="_blank">
-                            <img src="img/instagram.svg" alt="Instagram">
+                            <img src="../img/instagram.svg" alt="Instagram">
                         </a>
                         <a href="https://github.com/SuhihAlex?tab=repositories" class="about__page-link" target="_blank">
-                            <img src="img/github.svg" alt="GitHub">
+                            <img src="../img/github.svg" alt="GitHub">
                         </a>
                     </div>
                 </div>
@@ -144,6 +151,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

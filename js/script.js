@@ -82,7 +82,7 @@ for (let elm of elements) {
 /*====== BURGER ======*/
 // Функция для открытия/закрытия меню бургер
 // Function to toggle burger menu
-function burgerMenu() {
+window.burgerMenu = function() {
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.menu');
 
@@ -100,7 +100,8 @@ function burgerMenu() {
         // If the menu is closed, unlock scrolling of the page
         document.body.style.overflow = '';
     }
-}
+};
+
 
 // Обработчик события resize для блокировки скролла на мобильных устройствах
 // Resize event handler to lock scroll on mobile devices
@@ -212,17 +213,6 @@ function goBack() {
             window.location.href = prevPage;
         }
 
-// Замена языка
-        function changeLanguage() {
-        var select = document.getElementById("langSelect");
-        var selectedValue = select.value;
-        if (selectedValue === "ru") {
-            // Переадресация на русскую версию сайта
-            window.location.href = "../../MyPortfolioRus/index.html";
-        }
-    }
-
-
    $(document).ready(function() {
             $('#contactForm').submit(function(e) {
                 e.preventDefault();
@@ -260,6 +250,39 @@ function goBack() {
             $('#myModal').css('display', 'none');
         });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        console.log("Document ready. Adding event listener.");
+        document.getElementById("langSelect").addEventListener("change", function() {
+        var langSelect = document.getElementById("langSelect");
+        var selectedLang = langSelect.value;
+        var currentUrl = window.location.href;
+        
+        console.log("Selected language:", selectedLang);
+        console.log("Current URL:", currentUrl);
+        
+        var newUrl = currentUrl;
+        
+        if (selectedLang === "en") {
+            newUrl = newUrl.replace("/RU/", "/EN/");
+            newUrl = newUrl.replace("/RO/", "/EN/");
+        } else if (selectedLang === "ru") {
+            newUrl = newUrl.replace("/EN/", "/RU/");
+            newUrl = newUrl.replace("/RO/", "/RU/");
+        } else if (selectedLang === "ro") {
+            newUrl = newUrl.replace("/EN/", "/RO/");
+            newUrl = newUrl.replace("/RU/", "/RO/");
+        } else {
+            console.log("Language not recognized:", selectedLang);
+        }
+        
+        console.log("New URL:", newUrl);
+        
+        if (newUrl !== currentUrl) {
+            window.location.href = newUrl;
+        }
+    });
+});
 
 
 

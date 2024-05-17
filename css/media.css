@@ -57,6 +57,10 @@
         font-size: 46px;
     }
 
+    .projects__title-ru {
+        font-size: 60px;
+    }
+
     .projects__preview-portfolio {
          min-width: 475px;
          min-height: 245px;
@@ -66,8 +70,8 @@
         min-width: 364px;
     }
 
-    .news__item {
-        grid-column: 12 span;
+    .contacts__title-ru {
+        font-size: 90px;
     }
 
 }
@@ -78,12 +82,12 @@
         max-width: 1024px;
     }
 
-    .header__block {
-        justify-content: flex-end;
-    }
-
     .logo {
         z-index: 1002;
+    }
+
+    .block__closed {
+        display: none;
     }
 
     .header__block {
@@ -103,7 +107,7 @@
         }
 
     .hero__background-block {
-        padding-bottom: 180px;
+        padding-bottom: 130px;
     }
 
     .hero__background-title {
@@ -160,6 +164,10 @@
 
     .contacts__title-ru {
         font-size: 56px;
+    }
+
+    .contacts__subtitle-ru {
+        font-size: 21px;
     }
 
     .contacts__form {
@@ -219,6 +227,11 @@
 
     .hero__background-title {
         font-size: 105px;
+    }
+
+    .hero__title-ru {
+        height: 88px;
+        font-size: 100px;
     }
 
     .about__title {
@@ -315,7 +328,7 @@
     }
 
     .error__title {
-        font-size: 75px;
+        font-size: 60px;
     }
 
     .error__subtitle {
@@ -354,10 +367,10 @@
         font-size: 180px;
     }
 
-        .hero__title-ru {
-            height: 55px;
-            font-size: 53px;
-        }
+    .hero__title-ru {
+        height: 55px;
+        font-size: 53px;
+    }
 
     .hero__subtitle {
         font-size: 14px;

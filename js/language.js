@@ -51,7 +51,9 @@ function loadLanguageData() {
             "portfolioRobin": "Robin W&rsquo;s website. &mdash;&nbsp;is&nbsp;a&nbsp;one-page web designer portfolio site, this project used HTML, CSS, JS, jQuery and the Gulp builder.",
             "portfolioVr": "The VR&nbsp;Nas website is&nbsp;a&nbsp;multi-page cutting edge technology website, HTML, CSS, JS&nbsp;and jQuery were used in&nbsp;this project.",
             "portfolioWave": "W-wave Radio website is&nbsp;a&nbsp;one-page radio website, HTML, CSS were used in&nbsp;this project.",
-
+            "bigError": "ERROR",
+            "minError": "ERROR 404",
+            "subError": "The page is not yet available"
         },
         "ru": {
             "home": "Главная",
@@ -68,7 +70,7 @@ function loadLanguageData() {
             "heroSubtitle": "В настоящее время изучаю разработку веб-интерфейсов",
             "aboutSection": "Обо мне",
             "aboutTitle": "Обо мне",
-            "aboutDescription": "Привет, я Александр, увлеченный созданием решений, ориентированных на пользователя. Я специализируюсь на дизайне интерфейсов и пользовательских исследованиях, фронтенд-разработке и графическом дизайне, владею HTML, CSS, JavaScript, Node.js, jQuery, Bootstrap и Figma. Помимо программирования, я люблю играть в видеоигры, заниматься графическим дизайном и слушать музыку. Давайте поболтаем и воплотим ваши цифровые идеи в жизнь",
+            "about_text": "Привет, я Александр, увлеченный созданием решений, ориентированных на пользователя. Я специализируюсь на дизайне интерфейсов и пользовательских исследованиях, фронтенд-разработке и графическом дизайне, владею HTML, CSS, JavaScript, Node.js, jQuery, Bootstrap и Figma. Помимо программирования, я люблю играть в видеоигры, заниматься графическим дизайном и слушать музыку. Давайте поболтаем и воплотим ваши цифровые идеи в жизнь",
             "aboutLink": "Подробнее...",
             "projectsSection": "Недавние проекты",
             "seeAll": "Посмотреть все",
@@ -99,7 +101,9 @@ function loadLanguageData() {
             "portfolioRobin":  "Веб-сайт Робина W - это одностраничный сайт портфолио веб-дизайнера, в этом проекте использовались HTML, CSS, JS, jQuery и сборщик Gulp.",
             "portfolioVr":  "Веб-сайт VR Nas является многостраничным сайтом с передовыми технологиями, в этом проекте использовались HTML, CSS, JS и jQuery.",
             "portfolioWave": "Сайт радиостанции W-wave - это одностраничный сайт радиостанции, в этом проекте использовались HTML и CSS.",
-            "bigError": 'Error',
+            "bigError": "ОШИБКА",
+            "minError": "ОШИБКА 404",
+            "subError": "Страница еще не доступна"
             },
         "ro": {
             "home": "Acasă",
@@ -150,8 +154,10 @@ function loadLanguageData() {
             "portfolioRobin": "Site-ul lui Robin W - este un site de portofoliu al unui designer web cu o singură pagină, acest proiect a utilizat HTML, CSS, JS, jQuery și constructorul Gulp.",
             "portfolioVr": "Site-ul VR Nas este un site cu tehnologie de vârf cu mai multe pagini, HTML, CSS, JS și jQuery au fost utilizate în acest proiect.",
             "portfolioWave": "Site-ul radio W-wave este un site radio cu o singură pagină, HTML și CSS au fost utilizate în acest proiect.",
-
-        },
+            "bigError": "EROARE",
+            "minError": "EROARE 404",
+            "subError": "Pagina nu este încă disponibilă"
+        },  
     };
 }
 

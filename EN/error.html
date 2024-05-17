@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <title>ASFrontEnd</title>
+</head>
+<body class="page__body">
+    <div class="preloader">
+        <div class="preloader__spinner"></div>
+    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    <header class="header">
+        <div class="container header__block">
+            <div class="block__closed"></div>
+    
+            <nav class="header__nav scrollto">
+                <ul class="header__list list-reset">
+                    <li class="header__item"><a href="index.html" class="header__link" data-lang-key="home">Home</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">About me</a></li>
+                    <li class="header__item"><a href="projects.html" class="header__link" data-lang-key="projects">Projects</a></li>
+                    <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
+                    <li class="header__item"><a href="contacts.html" class="header__link" data-lang-key="contact">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <div class="lightning"></div>
+
+            <div class="header__block-language">
+                <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                    <option class="header__language-lang" value="en">EN</option>
+                    <option class="header__language-lang" value="ru">RU</option>
+                    <option class="header__language-lang" value="ro">RO</option>
+                </select>
+            </div>
+    
+            <div class="burger" onclick="burgerMenu()">
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list list-reset">
+                    <li class="menu__item"><a href="index.html" class="menu__link" data-lang-key="home">Home</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">About me</a></li>
+                    <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Projects</a></li>
+                    <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
+                    <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="error block">
+            <div class="container error__block">
+                <div class="error__background-block">
+                    <h2 class="error__background-title left-error" data-lang-key="bigError">ERROR ERROR</h2>
+                </div>
+                <div class="error__block-title">
+                    <h1 class="error__title" data-lang-key="minError">ERROR 404</h1>
+                    <p class="error__subtitle" data-lang-key="subError">
+                        The page is not yet available
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__block block">
+                <div class="footer__content">
+                    <h2 class="footer__title" data-lang-key="footerTitle">Alex.</h2>
+                    <p class="footer__subtitle" data-lang-key="footerSubtitle">
+                        I am a web developer living in Moldova. I have a very deep passion for Front End Development ❤ This
+                        site is made with a lot of love and passion.
+                    </p>
+                    <small>
+                        <span>Portfolio v2.0</span>
+                        © 2024 Alex
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/settings.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
     <title>ASFrontEnd</title>
 </head>
 <body class="page__body">
@@ -18,22 +18,30 @@
     <div class="progress-bar" id="progressBar"></div>
     <header class="header">
         <div class="container header__block">
+            <div class="block__closed"></div>
     
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
-                    <li class="header__item"><a href="index.html" class="header__link" data-lang-key="home">Home</a></li>
-                    <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">About me</a>
+                    <li class="header__item"><a href="index.html" class="header__link" data-lang-key="home">Acasă</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">Despre mine</a>
                     </li>
                     <li class="header__item"><a href="projects.html" class="header__link"
-                            data-lang-key="projects">Projects</a></li>
-                    <li class="header__item"><a href="news.html" class="header__link" data-lang-key="news">News</a></li>
+                            data-lang-key="projects">Proiecte</a></li>
                     <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
                     <li class="header__item"><a href="#" class="header__link active"
-                            data-lang-key="contact">Contact</a></li>
+                            data-lang-key="contact">Contacte</a></li>
                 </ul>
             </nav>
     
             <div class="lightning"></div>
+    
+            <div class="header__block-language">
+                        <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                            <option class="header__language-lang" value="ro">RO</option>
+                            <option class="header__language-lang" value="en">EN</option>
+                            <option class="header__language-lang" value="ru">RU</option>
+                        </select>
+                    </div>
     
             <div class="burger" onclick="burgerMenu()">
                 <div class="burger__bar"></div>
@@ -42,13 +50,13 @@
             </div>
             <nav class="menu">
                 <ul class="menu__list list-reset">
-                    <li class="menu__item"><a href="#" class="menu__link" data-lang-key="home">Home</a></li>
-                    <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">About me</a></li>
-                    <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Projects</a>
+                    <li class="menu__item"><a href="index.html" class="menu__link" data-lang-key="home">Acasă</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">Despre mine</a>
                     </li>
-                    <li class="menu__item"><a href="news.html" class="menu__link" data-lang-key="news">News</a></li>
+                    <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Proiecte</a>
+                    </li>
                     <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
-                    <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contact</a>
+                    <li class="menu__item"><a href="#" class="menu__link" data-lang-key="contact">Contacte</a>
                     </li>
                 </ul>
             </nav>
@@ -59,15 +67,16 @@
             <div class="container">
                 <div class="contacts__block">
                     <div class="contacts__block-content">
-                        <h2 class="contacts__title" data-lang-key="contactsTitle" id="contactsTitle">Get in Touch</h2>
+                        <h2 class="contacts__title" data-lang-key="contactsTitle" id="contactsTitle">Contactați-mă</h2>
                         <p class="contacts__subtitle" data-lang-key="contactsSubtitle">
-                            If you are interested in my work or want to provide feedback about this website, I am open to
-                            exchanging ideas.
+                            Dacă sunteți interesat de munca mea sau doriți să lăsați un feedback despre acest site, sunt deschis
+                            la
+                            schimbul de idei.
                         </p>
                     </div>
                     <form id="contactForm" class="contacts__form">
                         <div class="form__group">
-                            <label class="form__label" for="name" data-lang-key="nameLabel">Name</label>
+                            <label class="form__label" for="name" data-lang-key="nameLabel">Nume</label>
                             <input class="form__input" type="text" id="name" name="name" required>
                         </div>
                         <div class="form__group">
@@ -75,18 +84,19 @@
                             <input class="form__input" type="email" id="email" name="email" required>
                         </div>
                         <div class="form__group">
-                            <label class="form__label" for="message" data-lang-key="messageLabel">Message</label>
+                            <label class="form__label" for="message" data-lang-key="messageLabel">Mesaj</label>
                             <textarea class="form__text" name="message" id="message" rows="4" required></textarea>
                         </div>
-                        <button id="submitButton" class="form__btn" type="submit" data-lang-key="sendButton">Send</button>
+                        <button id="submitButton" class="form__btn" type="submit" data-lang-key="sendButton">Trimite</button>
                     </form>
                 </div>
             </div>
         </section>
+        
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Thank you for your message!</p>
+                <p data-lang-key="modalMessage">Mulțumesc pentru mesajul dumneavoastră!</p>
             </div>
         </div>
     </main>
@@ -96,17 +106,19 @@
                 <div class="footer__content">
                     <h2 class="footer__title" data-lang-key="footerTitle">Alex.</h2>
                     <p class="footer__subtitle" data-lang-key="footerSubtitle">
-                        I am a web developer living in Moldova. I have a very deep passion for Front End Development ❤ This
-                        site is made with a lot of love and passion.
+                        Sunt un dezvoltator web care trăiește în Moldova. Am o pasiune foarte profundă pentru dezvoltarea
+                        frontend <span>❤</span> Acest site este realizat
+                        cu multă dragoste și pasiune.
                     </p>
                     <small>
-                        <span data-lang-key="portfolioVersion">Portfolio v2.0</span>
-                        © 2024 Alex
+                        <span data-lang-key="portfolioVersion">Portofoliu v2.0</span>
+                        <span data-lang-key="copyright">© 2024 Alex</span>
                     </small>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

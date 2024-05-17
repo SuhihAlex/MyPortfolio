@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/settings.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
     <title>ASFrontEnd</title>
 </head>
 <body class="page__body">
@@ -18,6 +18,7 @@
     <div class="progress-bar" id="progressBar"></div>
     <header class="header">
         <div class="container header__block">
+            <div class="block__closed"></div>
     
             <nav class="header__nav scrollto">
                 <ul class="header__list list-reset">
@@ -25,14 +26,21 @@
                     <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">About me</a>
                     </li>
                     <li class="header__item"><a href="#" class="header__link active" data-lang-key="projects">Projects</a></li>
-                    <li class="header__item"><a href="news.html" class="header__link" data-lang-key="news">News</a></li>
                     <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Blog</a></li>
                     <li class="header__item"><a href="contacts.html" class="header__link" data-lang-key="contact">Contact</a></li>
                 </ul>
             </nav>
     
             <div class="lightning"></div>
-    
+
+            <div class="header__block-language">
+                <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                    <option class="header__language-lang" value="en">EN</option>
+                    <option class="header__language-lang" value="ru">RU</option>
+                    <option class="header__language-lang" value="ro">RO</option>
+                </select>
+            </div>
+
             <div class="burger" onclick="burgerMenu()">
                 <div class="burger__bar"></div>
                 <div class="burger__bar"></div>
@@ -44,7 +52,6 @@
                     <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">About me</a></li>
                     <li class="menu__item"><a href="#" class="menu__link" data-lang-key="projects">Projects</a>
                     </li>
-                    <li class="menu__item"><a href="news.html" class="menu__link" data-lang-key="news">News</a></li>
                     <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Blog</a></li>
                     <li class="menu__item"><a href="contacts.html" class="menu__link" data-lang-key="contact">Contact</a>
                     </li>
@@ -61,7 +68,7 @@
                 <div class="projects__page-content" id="projects-content">
                     <a href="portfolio.html" class="projects__card projects__card-animation">
                         <div class="projects__block-img portfolio">
-                            <img src="img/projects/portfolio.png" alt="Portfolio">
+                            <img src="../img/projects/portfolio.png" alt="Portfolio">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title" data-lang-key="portfolioTitle">Portfolio</h3>
@@ -72,16 +79,16 @@
                                 in&nbsp;technologies such as&nbsp;HTML, CSS, JS&nbsp;and Figma.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
                     <a href="trinity.html" class="projects__card projects__card-animation">
                         <div class="bkl projects__block-img">
-                            <img src="img/projects/Trinity.png" alt="Trinity">
+                            <img src="../img/projects/Trinity.png" alt="Trinity">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title" data-lang-key="trinityTitle">Trinity</h3>
@@ -91,17 +98,17 @@
                                 of&nbsp;technologies such as&nbsp;HTML, CSS, JS, PHP and Figma.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/php_horizontal_logo_icon_170852.svg" alt="PHP">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                                <img src="../img/php_horizontal_logo_icon_170852.svg" alt="PHP">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
                     <a href="rivo.html" class="projects__card projects__card-animation">
                         <div class="rivo projects__block-img">
-                            <img src="img/projects/Rivo.png" alt="Rivo">
+                            <img src="../img/projects/Rivo.png" alt="Rivo">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title" data-lang-key="rivoTitle">Rivo</h3>
@@ -112,17 +119,17 @@
                                 and built using Gulp
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/php_horizontal_logo_icon_170852.svg" alt="PHP">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                                <img src="../img/php_horizontal_logo_icon_170852.svg" alt="PHP">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
                     <a href="blanchard.html" class="projects__card projects__card-animation">
                         <div class="blanchard projects__block-img">
-                            <img src="img/projects/Blanchard.png" alt="Blanchard">
+                            <img src="../img/projects/Blanchard.png" alt="Blanchard">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Blanchard</h3>
@@ -131,14 +138,14 @@
                                 The Blanchard website is&nbsp;a&nbsp;single page website with animations, HTML and CSS were used in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
                             </div>
                         </div>
                     </a>
                     <a href="evklid.html" class="projects__card projects__card-animation">
                         <div class="evklid projects__block-img">
-                            <img src="img/projects/Evklid.png" alt="Evklid">
+                            <img src="../img/projects/Evklid.png" alt="Evklid">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Evklid</h3>
@@ -148,14 +155,14 @@
                                 in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
                             </div>
                         </div>
                     </a>
                     <a href="error.html" class="projects__card projects__card-animation">
                         <div class="finsweet projects__block-img">
-                            <img src="img/projects/Finsweet.png" alt="Finsweet">
+                            <img src="../img/projects/Finsweet.png" alt="Finsweet">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Finsweet</h3>
@@ -165,16 +172,16 @@
                                 in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
                     <a href="recidiviz.html" class="projects__card projects__card-animation">
                         <div class="recidiviz projects__block-img">
-                            <img src="img/projects/Recidiviz.png" alt="Recidiviz">
+                            <img src="../img/projects/Recidiviz.png" alt="Recidiviz">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Recidiviz</h3>
@@ -184,16 +191,16 @@
                                 in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
                     <a href="robin.html" class="projects__card projects__card-animation">
                         <div class="robin projects__block-img">
-                            <img src="img/projects/Robin.png" alt="Robin W">
+                            <img src="../img/projects/Robin.png" alt="Robin W">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">Robin W</h3>
@@ -203,17 +210,17 @@
                                 JS, jQuery and the Gulp builder.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/jquery_plain_wordmark_logo_icon_146445.svg" alt="jQuery">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                                <img src="../img/jquery_plain_wordmark_logo_icon_146445.svg" alt="jQuery">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
                     <a href="vr.html" class="projects__card projects__card-animation">
                         <div class="vr projects__block-img">
-                            <img src="img/projects/VR.png" alt="VR Nas">
+                            <img src="../img/projects/VR.png" alt="VR Nas">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">VR Nas</h3>
@@ -223,17 +230,17 @@
                                 used in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/javascript_icon_130900.svg" alt="JavaScript">
-                                <img src="img/jquery_plain_wordmark_logo_icon_146445.svg" alt="jQuery">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/javascript_icon_130900.svg" alt="JavaScript">
+                                <img src="../img/jquery_plain_wordmark_logo_icon_146445.svg" alt="jQuery">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
                     <a href="wave.html" class="projects__card projects__card-animation">
                         <div class="wave projects__block-img">
-                            <img src="img/projects/W-Wave.png" alt="W-wave">
+                            <img src="../img/projects/W-Wave.png" alt="W-wave">
                         </div>
                         <div class="projects__card-text">
                             <h3 class="projects__card-title">W-wave Radio</h3>
@@ -242,9 +249,9 @@
                                 W-wave Radio website is&nbsp;a&nbsp;one-page radio website, HTML, CSS were used in&nbsp;this project.
                             </p>
                             <div class="projects__block-icon">
-                                <img src="img/file_type_html_icon_130541.svg" alt="HTML">
-                                <img src="img/file_type_css_icon_130661.svg" alt="CSS">
-                                <img src="img/figma_logo_icon_170157.svg" alt="Figma">
+                                <img src="../img/file_type_html_icon_130541.svg" alt="HTML">
+                                <img src="../img/file_type_css_icon_130661.svg" alt="CSS">
+                                <img src="../img/figma_logo_icon_170157.svg" alt="Figma">
                             </div>
                         </div>
                     </a>
@@ -269,6 +276,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

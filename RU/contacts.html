@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <title>ASFrontEnd</title>
+</head>
+<body class="page__body">
+    <div class="preloader">
+        <div class="preloader__spinner"></div>
+    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    <header class="header">
+        <div class="container header__block">
+            <div class="block__closed"></div>
+    
+            <nav class="header__nav scrollto">
+                <ul class="header__list list-reset">
+                    <li class="header__item"><a href="index.html" class="header__link" data-lang-key="home">Главная</a></li>
+                    <li class="header__item"><a href="about.html" class="header__link" data-lang-key="about">Обо мне</a>
+                    </li>
+                    <li class="header__item"><a href="projects.html" class="header__link"
+                            data-lang-key="projects">Проекты</a></li>
+                    <li class="header__item"><a href="error.html" class="header__link" data-lang-key="blog">Блог</a></li>
+                    <li class="header__item"><a href="#" class="header__link active"
+                            data-lang-key="contact">Контакты</a></li>
+                </ul>
+            </nav>
+    
+            <div class="lightning"></div>
+
+            <div class="header__block-language">
+                <select class="header__language-select" id="langSelect" onchange="changeLanguage()">
+                    <option class="header__language-lang" value="ru">RU</option>
+                    <option class="header__language-lang" value="en">EN</option>
+                    <option class="header__language-lang" value="ro">RO</option>
+                </select>
+            </div>
+    
+            <div class="burger" onclick="burgerMenu()">
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list list-reset">
+                    <li class="menu__item"><a href="index.html" class="menu__link" data-lang-key="home">Главная</a></li>
+                    <li class="menu__item"><a href="about.html" class="menu__link" data-lang-key="about">Обо мне</a></li>
+                    <li class="menu__item"><a href="projects.html" class="menu__link" data-lang-key="projects">Проекты</a>
+                    </li>
+                    <li class="menu__item"><a href="error.html" class="menu__link" data-lang-key="blog">Блог</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" data-lang-key="contact">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts__block">
+                    <div class="contacts__block-content">
+                        <h2 class="contacts__title contacts__title-ru" data-lang-key="contactsTitle" id="contactsTitle">Свяжитесь со мной</h2>
+                        <p class="contacts__subtitle contacts__subtitle-ru" data-lang-key="contactsSubtitle">
+                            Если вы заинтересовались моей работой или хотите оставить отзыв об этом сайте, я открыт для
+                            обмена идеями.
+                        </p>
+                    </div>
+                    <form id="contactForm" class="contacts__form">
+                        <div class="form__group">
+                            <label class="form__label" for="name" data-lang-key="nameLabel">Имя</label>
+                            <input class="form__input" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="email" data-lang-key="emailLabel">Email</label>
+                            <input class="form__input" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="message" data-lang-key="messageLabel">Сообщение</label>
+                            <textarea class="form__text" name="message" id="message" rows="4" required></textarea>
+                        </div>
+                        <button id="submitButton" class="form__btn" type="submit" data-lang-key="sendButton">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Спасибо за ваше сообщение!</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__block block">
+                <div class="footer__content">
+                    <h2 class="footer__title" data-lang-key="footerTitle">Alex.</h2>
+                    <p class="footer__subtitle" data-lang-key="footerSubtitle">
+                        Я веб-разработчик, живущий в Молдове. У меня очень глубокая страсть к Фронтенд Разработке <span>❤</span> Этот сайт сделан
+                        с большой любовью и страстью.
+                    </p>
+                    <small>
+                        <span data-lang-key="portfolioVersion">Portfolio v2.0</span>
+                        © 2024 Alex
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
