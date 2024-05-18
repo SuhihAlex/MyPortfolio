@@ -166,6 +166,10 @@
         font-size: 56px;
     }
 
+    .contacts__title-ro {
+        font-size: 99px;
+    }
+
     .contacts__subtitle-ru {
         font-size: 21px;
     }
@@ -232,6 +236,11 @@
     .hero__title-ru {
         height: 88px;
         font-size: 100px;
+    }
+
+    .hero__title-ro {
+        font-size: 210px;
+        height: 175px;
     }
 
     .about__title {
