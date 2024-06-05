@@ -403,7 +403,7 @@
     }
 
     .hero__title-ro {
-        font-size: 129px;
+        font-size: 100px;
         height: 112px;
     }
 
@@ -419,6 +419,10 @@
         font-size: 16px;
     }
 
+    .about__page-title--ro {
+        font-size: 30px;
+    }
+
     .projects__block-img img {
         max-width: 90%;
     }
@@ -430,6 +434,10 @@
 
     .projects__title {
         display: none;
+    }
+
+    .projects__preview-descr--ru {
+        font-size: 17px;
     }
 
     .contacts__block {
@@ -445,7 +453,7 @@
     }
 
     .contacts__title-ro {
-        font-size: 65px;
+        font-size: 50px;
     }
 
     .contacts__subtitle {
